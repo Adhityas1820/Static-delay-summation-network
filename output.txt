@@ -1,0 +1,1313 @@
+device: cuda  |  backbone: imagenet_resnet18  |  arch: 4L h32 res=False norm=False  |  thr: 0.7  min-dist: 12f  match-tol: 8f
+videos dir: C:\Adhitya\Coding\test\FDNN\test set
+ground truth: dash_counter heuristic (detected per video)
+  torchcodec GPU decode unavailable on 3-10 luna ghost dash.mkv (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core4.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  decoder: decord (CPU, downscaled)
+  backbone: ImageNet ResNet18 (general-purpose, default)
+  [#-----------------------------] 64/1180 frames (  5.4%)  [###---------------------------] 128/1180 frames ( 10.8%)  [####--------------------------] 192/1180 frames ( 16.3%)  [######------------------------] 256/1180 frames ( 21.7%)  [########----------------------] 320/1180 frames ( 27.1%)  [#########---------------------] 384/1180 frames ( 32.5%)  [###########-------------------] 448/1180 frames ( 38.0%)  [#############-----------------] 512/1180 frames ( 43.4%)  [##############----------------] 576/1180 frames ( 48.8%)  [################--------------] 640/1180 frames ( 54.2%)  [#################-------------] 704/1180 frames ( 59.7%)  [###################-----------] 768/1180 frames ( 65.1%)  [#####################---------] 832/1180 frames ( 70.5%)  [######################--------] 896/1180 frames ( 75.9%)  [########################------] 960/1180 frames ( 81.4%)  [##########################----] 1024/1180 frames ( 86.8%)  [###########################---] 1088/1180 frames ( 92.2%)  [#############################-] 1152/1180 frames ( 97.6%)  [##############################] 1180/1180 frames (100.0%)
+  [3-10 luna ghost dash.mkv] duration 19.7s -> contours from models/clips/
+  [3-10 luna ghost dash.mkv] Dash slot: RIGHT (slot2)  (avg contours: 4.46)
+  [3-10 luna ghost dash.mkv] RIGHT layout: old  (white fills: normal=11, old=156)
+  [3-10 luna ghost dash.mkv] pred 3 / gt 4 dashes  (err -1; tp 3 fp 0 fn 1)
+  torchcodec GPU decode unavailable on 5-10 candd1 shot.mkv (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1099 frames (  5.8%)  [###---------------------------] 128/1099 frames ( 11.6%)  [#####-------------------------] 192/1099 frames ( 17.5%)  [######------------------------] 256/1099 frames ( 23.3%)  [########----------------------] 320/1099 frames ( 29.1%)  [##########--------------------] 384/1099 frames ( 34.9%)  [############------------------] 448/1099 frames ( 40.8%)  [#############-----------------] 512/1099 frames ( 46.6%)  [###############---------------] 576/1099 frames ( 52.4%)  [#################-------------] 640/1099 frames ( 58.2%)  [###################-----------] 704/1099 frames ( 64.1%)  [####################----------] 768/1099 frames ( 69.9%)  [######################--------] 832/1099 frames ( 75.7%)  [########################------] 896/1099 frames ( 81.5%)  [##########################----] 960/1099 frames ( 87.4%)  [###########################---] 1024/1099 frames ( 93.2%)  [#############################-] 1088/1099 frames ( 99.0%)  [##############################] 1099/1099 frames (100.0%)
+  [5-10 candd1 shot.mkv] duration 18.3s -> contours from models/clips/
+  [5-10 candd1 shot.mkv] Dash slot: RIGHT (slot2)  (avg contours: 4.25)
+  [5-10 candd1 shot.mkv] RIGHT layout: old  (white fills: normal=0, old=140)
+  [5-10 candd1 shot.mkv] pred 3 / gt 3 dashes  (err +0; tp 3 fp 0 fn 0)
+  torchcodec GPU decode unavailable on 5-10 panther cap teamup kill.mkv (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1163 frames (  5.5%)  [###---------------------------] 128/1163 frames ( 11.0%)  [####--------------------------] 192/1163 frames ( 16.5%)  [######------------------------] 256/1163 frames ( 22.0%)  [########----------------------] 320/1163 frames ( 27.5%)  [#########---------------------] 384/1163 frames ( 33.0%)  [###########-------------------] 448/1163 frames ( 38.5%)  [#############-----------------] 512/1163 frames ( 44.0%)  [##############----------------] 576/1163 frames ( 49.5%)  [################--------------] 640/1163 frames ( 55.0%)  [##################------------] 704/1163 frames ( 60.5%)  [###################-----------] 768/1163 frames ( 66.0%)  [#####################---------] 832/1163 frames ( 71.5%)  [#######################-------] 896/1163 frames ( 77.0%)  [########################------] 960/1163 frames ( 82.5%)  [##########################----] 1024/1163 frames ( 88.0%)  [############################--] 1088/1163 frames ( 93.6%)  [#############################-] 1152/1163 frames ( 99.1%)  [##############################] 1163/1163 frames (100.0%)
+  [5-10 panther cap teamup kill.mkv] duration 19.4s -> contours from models/clips/
+  [5-10 panther cap teamup kill.mkv] Dash slot: RIGHT (slot2)  (avg contours: 3.83)
+  [5-10 panther cap teamup kill.mkv] RIGHT layout: old  (white fills: normal=0, old=79)
+  [5-10 panther cap teamup kill.mkv] pred 2 / gt 1 dashes  (err +1; tp 1 fp 1 fn 0)
+  torchcodec GPU decode unavailable on 5-10 triple ghost dash no kill.mkv (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1148 frames (  5.6%)  [###---------------------------] 128/1148 frames ( 11.1%)  [#####-------------------------] 192/1148 frames ( 16.7%)  [######------------------------] 256/1148 frames ( 22.3%)  [########----------------------] 320/1148 frames ( 27.9%)  [##########--------------------] 384/1148 frames ( 33.4%)  [###########-------------------] 448/1148 frames ( 39.0%)  [#############-----------------] 512/1148 frames ( 44.6%)  [###############---------------] 576/1148 frames ( 50.2%)  [################--------------] 640/1148 frames ( 55.7%)  [##################------------] 704/1148 frames ( 61.3%)  [####################----------] 768/1148 frames ( 66.9%)  [#####################---------] 832/1148 frames ( 72.5%)  [#######################-------] 896/1148 frames ( 78.0%)  [#########################-----] 960/1148 frames ( 83.6%)  [##########################----] 1024/1148 frames ( 89.2%)  [############################--] 1088/1148 frames ( 94.8%)  [##############################] 1148/1148 frames (100.0%)
+  [5-10 triple ghost dash no kill.mkv] duration 19.1s -> contours from models/clips/
+  [5-10 triple ghost dash no kill.mkv] Dash slot: RIGHT (slot2)  (avg contours: 4.17)
+  [5-10 triple ghost dash no kill.mkv] RIGHT layout: old  (white fills: normal=0, old=151)
+  [5-10 triple ghost dash no kill.mkv] pred 5 / gt 5 dashes  (err +0; tp 5 fp 0 fn 0)
+  torchcodec GPU decode unavailable on 7-10 triple ghost dash.mkv (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1136 frames (  5.6%)  [###---------------------------] 128/1136 frames ( 11.3%)  [#####-------------------------] 192/1136 frames ( 16.9%)  [######------------------------] 256/1136 frames ( 22.5%)  [########----------------------] 320/1136 frames ( 28.2%)  [##########--------------------] 384/1136 frames ( 33.8%)  [###########-------------------] 448/1136 frames ( 39.4%)  [#############-----------------] 512/1136 frames ( 45.1%)  [###############---------------] 576/1136 frames ( 50.7%)  [################--------------] 640/1136 frames ( 56.3%)  [##################------------] 704/1136 frames ( 62.0%)  [####################----------] 768/1136 frames ( 67.6%)  [#####################---------] 832/1136 frames ( 73.2%)  [#######################-------] 896/1136 frames ( 78.9%)  [#########################-----] 960/1136 frames ( 84.5%)  [###########################---] 1024/1136 frames ( 90.1%)  [############################--] 1088/1136 frames ( 95.8%)  [##############################] 1136/1136 frames (100.0%)
+  [7-10 triple ghost dash.mkv] duration 18.9s -> contours from models/clips/
+  [7-10 triple ghost dash.mkv] Dash slot: RIGHT (slot2)  (avg contours: 4.62)
+  [7-10 triple ghost dash.mkv] RIGHT layout: old  (white fills: normal=0, old=148)
+  [7-10 triple ghost dash.mkv] pred 4 / gt 4 dashes  (err +0; tp 4 fp 0 fn 0)
+  torchcodec GPU decode unavailable on 8-10 panther ult 4k.mkv (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1145 frames (  5.6%)  [###---------------------------] 128/1145 frames ( 11.2%)  [#####-------------------------] 192/1145 frames ( 16.8%)  [######------------------------] 256/1145 frames ( 22.4%)  [########----------------------] 320/1145 frames ( 27.9%)  [##########--------------------] 384/1145 frames ( 33.5%)  [###########-------------------] 448/1145 frames ( 39.1%)  [#############-----------------] 512/1145 frames ( 44.7%)  [###############---------------] 576/1145 frames ( 50.3%)  [################--------------] 640/1145 frames ( 55.9%)  [##################------------] 704/1145 frames ( 61.5%)  [####################----------] 768/1145 frames ( 67.1%)  [#####################---------] 832/1145 frames ( 72.7%)  [#######################-------] 896/1145 frames ( 78.3%)  [#########################-----] 960/1145 frames ( 83.8%)  [##########################----] 1024/1145 frames ( 89.4%)  [############################--] 1088/1145 frames ( 95.0%)  [##############################] 1145/1145 frames (100.0%)
+  [8-10 panther ult 4k.mkv] duration 19.1s -> contours from models/clips/
+  [8-10 panther ult 4k.mkv] Dash slot: RIGHT (slot2)  (avg contours: 4.38)
+  [8-10 panther ult 4k.mkv] RIGHT layout: old  (white fills: normal=15, old=185)
+  [8-10 panther ult 4k.mkv] pred 7 / gt 7 dashes  (err +0; tp 7 fp 0 fn 0)
+  torchcodec GPU decode unavailable on actirple.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1186 frames (  5.4%)  [###---------------------------] 128/1186 frames ( 10.8%)  [####--------------------------] 192/1186 frames ( 16.2%)  [######------------------------] 256/1186 frames ( 21.6%)  [########----------------------] 320/1186 frames ( 27.0%)  [#########---------------------] 384/1186 frames ( 32.4%)  [###########-------------------] 448/1186 frames ( 37.8%)  [############------------------] 512/1186 frames ( 43.2%)  [##############----------------] 576/1186 frames ( 48.6%)  [################--------------] 640/1186 frames ( 54.0%)  [#################-------------] 704/1186 frames ( 59.4%)  [###################-----------] 768/1186 frames ( 64.8%)  [#####################---------] 832/1186 frames ( 70.2%)  [######################--------] 896/1186 frames ( 75.5%)  [########################------] 960/1186 frames ( 80.9%)  [#########################-----] 1024/1186 frames ( 86.3%)  [###########################---] 1088/1186 frames ( 91.7%)  [#############################-] 1152/1186 frames ( 97.1%)  [##############################] 1186/1186 frames (100.0%)
+  [actirple.mp4] duration 19.8s -> contours from models/clips/
+  [actirple.mp4] Dash slot: RIGHT (slot2)  (avg contours: 4.04)
+  [actirple.mp4] RIGHT layout: normal  (white fills: normal=89, old=6)
+  [actirple.mp4] pred 4 / gt 4 dashes  (err +0; tp 4 fp 0 fn 0)
+  torchcodec GPU decode unavailable on birnin tchalla almost penta.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1140 frames (  5.6%)  [###---------------------------] 128/1140 frames ( 11.2%)  [#####-------------------------] 192/1140 frames ( 16.8%)  [######------------------------] 256/1140 frames ( 22.5%)  [########----------------------] 320/1140 frames ( 28.1%)  [##########--------------------] 384/1140 frames ( 33.7%)  [###########-------------------] 448/1140 frames ( 39.3%)  [#############-----------------] 512/1140 frames ( 44.9%)  [###############---------------] 576/1140 frames ( 50.5%)  [################--------------] 640/1140 frames ( 56.1%)  [##################------------] 704/1140 frames ( 61.8%)  [####################----------] 768/1140 frames ( 67.4%)  [#####################---------] 832/1140 frames ( 73.0%)  [#######################-------] 896/1140 frames ( 78.6%)  [#########################-----] 960/1140 frames ( 84.2%)  [##########################----] 1024/1140 frames ( 89.8%)  [############################--] 1088/1140 frames ( 95.4%)  [##############################] 1140/1140 frames (100.0%)
+  [birnin tchalla almost penta.mp4] duration 19.0s -> contours from models/clips/
+  [birnin tchalla almost penta.mp4] Dash slot: LEFT (slot3)  (avg contours: 1.00)
+  [birnin tchalla almost penta.mp4] pred 7 / gt 7 dashes  (err +0; tp 6 fp 1 fn 1)
+  torchcodec GPU decode unavailable on clean husk 5k.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1185 frames (  5.4%)  [###---------------------------] 128/1185 frames ( 10.8%)  [####--------------------------] 192/1185 frames ( 16.2%)  [######------------------------] 256/1185 frames ( 21.6%)  [########----------------------] 320/1185 frames ( 27.0%)  [#########---------------------] 384/1185 frames ( 32.4%)  [###########-------------------] 448/1185 frames ( 37.8%)  [############------------------] 512/1185 frames ( 43.2%)  [##############----------------] 576/1185 frames ( 48.6%)  [################--------------] 640/1185 frames ( 54.0%)  [#################-------------] 704/1185 frames ( 59.4%)  [###################-----------] 768/1185 frames ( 64.8%)  [#####################---------] 832/1185 frames ( 70.2%)  [######################--------] 896/1185 frames ( 75.6%)  [########################------] 960/1185 frames ( 81.0%)  [#########################-----] 1024/1185 frames ( 86.4%)  [###########################---] 1088/1185 frames ( 91.8%)  [#############################-] 1152/1185 frames ( 97.2%)  [##############################] 1185/1185 frames (100.0%)
+  [clean husk 5k.mp4] duration 19.7s -> contours from models/clips/
+  [clean husk 5k.mp4] Dash slot: RIGHT (slot2)  (avg contours: 3.21)
+  [clean husk 5k.mp4] RIGHT layout: normal  (white fills: normal=195, old=66)
+  [clean husk 5k.mp4] pred 9 / gt 9 dashes  (err +0; tp 9 fp 0 fn 0)
+  torchcodec GPU decode unavailable on clean kunlun mk kill.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1124 frames (  5.7%)  [###---------------------------] 128/1124 frames ( 11.4%)  [#####-------------------------] 192/1124 frames ( 17.1%)  [######------------------------] 256/1124 frames ( 22.8%)  [########----------------------] 320/1124 frames ( 28.5%)  [##########--------------------] 384/1124 frames ( 34.2%)  [###########-------------------] 448/1124 frames ( 39.9%)  [#############-----------------] 512/1124 frames ( 45.6%)  [###############---------------] 576/1124 frames ( 51.2%)  [#################-------------] 640/1124 frames ( 56.9%)  [##################------------] 704/1124 frames ( 62.6%)  [####################----------] 768/1124 frames ( 68.3%)  [######################--------] 832/1124 frames ( 74.0%)  [#######################-------] 896/1124 frames ( 79.7%)  [#########################-----] 960/1124 frames ( 85.4%)  [###########################---] 1024/1124 frames ( 91.1%)  [#############################-] 1088/1124 frames ( 96.8%)  [##############################] 1124/1124 frames (100.0%)
+  [clean kunlun mk kill.mp4] duration 18.7s -> contours from models/clips/
+  [clean kunlun mk kill.mp4] Dash slot: RIGHT (slot2)  (avg contours: 4.17)
+  [clean kunlun mk kill.mp4] RIGHT layout: normal  (white fills: normal=97, old=62)
+  [clean kunlun mk kill.mp4] pred 3 / gt 3 dashes  (err +0; tp 3 fp 0 fn 0)
+  torchcodec GPU decode unavailable on midtown.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1136 frames (  5.6%)  [###---------------------------] 128/1136 frames ( 11.3%)  [#####-------------------------] 192/1136 frames ( 16.9%)  [######------------------------] 256/1136 frames ( 22.5%)  [########----------------------] 320/1136 frames ( 28.2%)  [##########--------------------] 384/1136 frames ( 33.8%)  [###########-------------------] 448/1136 frames ( 39.4%)  [#############-----------------] 512/1136 frames ( 45.1%)  [###############---------------] 576/1136 frames ( 50.7%)  [################--------------] 640/1136 frames ( 56.3%)  [##################------------] 704/1136 frames ( 62.0%)  [####################----------] 768/1136 frames ( 67.6%)  [#####################---------] 832/1136 frames ( 73.2%)  [#######################-------] 896/1136 frames ( 78.9%)  [#########################-----] 960/1136 frames ( 84.5%)  [###########################---] 1024/1136 frames ( 90.1%)  [############################--] 1088/1136 frames ( 95.8%)  [##############################] 1136/1136 frames (100.0%)
+  [midtown.mp4] duration 18.9s -> contours from models/clips/
+  [midtown.mp4] Dash slot: LEFT (slot3)  (avg contours: 1.00)
+  [midtown.mp4] pred 6 / gt 6 dashes  (err +0; tp 6 fp 0 fn 0)
+  torchcodec GPU decode unavailable on purple panther spider islands 4k.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1188 frames (  5.4%)  [###---------------------------] 128/1188 frames ( 10.8%)  [####--------------------------] 192/1188 frames ( 16.2%)  [######------------------------] 256/1188 frames ( 21.5%)  [########----------------------] 320/1188 frames ( 26.9%)  [#########---------------------] 384/1188 frames ( 32.3%)  [###########-------------------] 448/1188 frames ( 37.7%)  [############------------------] 512/1188 frames ( 43.1%)  [##############----------------] 576/1188 frames ( 48.5%)  [################--------------] 640/1188 frames ( 53.9%)  [#################-------------] 704/1188 frames ( 59.3%)  [###################-----------] 768/1188 frames ( 64.6%)  [#####################---------] 832/1188 frames ( 70.0%)  [######################--------] 896/1188 frames ( 75.4%)  [########################------] 960/1188 frames ( 80.8%)  [#########################-----] 1024/1188 frames ( 86.2%)  [###########################---] 1088/1188 frames ( 91.6%)  [#############################-] 1152/1188 frames ( 97.0%)  [##############################] 1188/1188 frames (100.0%)
+  [purple panther spider islands 4k.mp4] duration 19.8s -> contours from models/clips/
+  [purple panther spider islands 4k.mp4] Dash slot: LEFT (slot3)  (avg contours: 1.00)
+  [purple panther spider islands 4k.mp4] pred 5 / gt 5 dashes  (err +0; tp 4 fp 1 fn 1)
+  torchcodec GPU decode unavailable on quick invis.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1197 frames (  5.3%)  [###---------------------------] 128/1197 frames ( 10.7%)  [####--------------------------] 192/1197 frames ( 16.0%)  [######------------------------] 256/1197 frames ( 21.4%)  [########----------------------] 320/1197 frames ( 26.7%)  [#########---------------------] 384/1197 frames ( 32.1%)  [###########-------------------] 448/1197 frames ( 37.4%)  [############------------------] 512/1197 frames ( 42.8%)  [##############----------------] 576/1197 frames ( 48.1%)  [################--------------] 640/1197 frames ( 53.5%)  [#################-------------] 704/1197 frames ( 58.8%)  [###################-----------] 768/1197 frames ( 64.2%)  [####################----------] 832/1197 frames ( 69.5%)  [######################--------] 896/1197 frames ( 74.9%)  [########################------] 960/1197 frames ( 80.2%)  [#########################-----] 1024/1197 frames ( 85.5%)  [###########################---] 1088/1197 frames ( 90.9%)  [############################--] 1152/1197 frames ( 96.2%)  [##############################] 1197/1197 frames (100.0%)
+  [quick invis.mp4] duration 19.9s -> contours from models/clips/
+  [quick invis.mp4] Dash slot: RIGHT (slot2)  (avg contours: 3.83)
+  [quick invis.mp4] RIGHT layout: normal  (white fills: normal=46, old=17)
+  [quick invis.mp4] pred 3 / gt 3 dashes  (err +0; tp 3 fp 0 fn 0)
+  torchcodec GPU decode unavailable on souder uskabds truoke.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  decord failed on souder uskabds truoke.mp4 (Error reading C:\Adhitya\Coding\test\FDNN\test set\souder uskabds truoke.mp4...); falling back to OpenCV.
+  [souder uskabds truoke.mp4] could not decode (0 frames) — file may be corrupt or an undecodable codec. Left blank.
+  torchcodec GPU decode unavailable on spider islands cable combo.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [#-----------------------------] 64/1124 frames (  5.7%)  [###---------------------------] 128/1124 frames ( 11.4%)  [#####-------------------------] 192/1124 frames ( 17.1%)  [######------------------------] 256/1124 frames ( 22.8%)  [########----------------------] 320/1124 frames ( 28.5%)  [##########--------------------] 384/1124 frames ( 34.2%)  [###########-------------------] 448/1124 frames ( 39.9%)  [#############-----------------] 512/1124 frames ( 45.6%)  [###############---------------] 576/1124 frames ( 51.2%)  [#################-------------] 640/1124 frames ( 56.9%)  [##################------------] 704/1124 frames ( 62.6%)  [####################----------] 768/1124 frames ( 68.3%)  [######################--------] 832/1124 frames ( 74.0%)  [#######################-------] 896/1124 frames ( 79.7%)  [#########################-----] 960/1124 frames ( 85.4%)  [###########################---] 1024/1124 frames ( 91.1%)  [#############################-] 1088/1124 frames ( 96.8%)  [##############################] 1124/1124 frames (100.0%)
+  [spider islands cable combo.mp4] duration 18.7s -> contours from models/clips/
+  [spider islands cable combo.mp4] Dash slot: LEFT (slot3)  (avg contours: 0.71)
+  [spider islands cable combo.mp4] pred 3 / gt 3 dashes  (err +0; tp 3 fp 0 fn 0)
+  torchcodec GPU decode unavailable on training video 70 11-18.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [------------------------------] 64/40702 frames (  0.2%)  [------------------------------] 128/40702 frames (  0.3%)  [------------------------------] 192/40702 frames (  0.5%)  [------------------------------] 256/40702 frames (  0.6%)  [------------------------------] 320/40702 frames (  0.8%)  [------------------------------] 384/40702 frames (  0.9%)  [------------------------------] 448/40702 frames (  1.1%)  [------------------------------] 512/40702 frames (  1.3%)  [------------------------------] 576/40702 frames (  1.4%)  [------------------------------] 640/40702 frames (  1.6%)  [------------------------------] 704/40702 frames (  1.7%)  [------------------------------] 768/40702 frames (  1.9%)  [------------------------------] 832/40702 frames (  2.0%)  [------------------------------] 896/40702 frames (  2.2%)  [------------------------------] 960/40702 frames (  2.4%)  [------------------------------] 1024/40702 frames (  2.5%)  [------------------------------] 1088/40702 frames (  2.7%)  [------------------------------] 1152/40702 frames (  2.8%)  [------------------------------] 1216/40702 frames (  3.0%)  [------------------------------] 1280/40702 frames (  3.1%)  [------------------------------] 1344/40702 frames (  3.3%)  [#-----------------------------] 1408/40702 frames (  3.5%)  [#-----------------------------] 1472/40702 frames (  3.6%)  [#-----------------------------] 1536/40702 frames (  3.8%)  [#-----------------------------] 1600/40702 frames (  3.9%)  [#-----------------------------] 1664/40702 frames (  4.1%)  [#-----------------------------] 1728/40702 frames (  4.2%)  [#-----------------------------] 1792/40702 frames (  4.4%)  [#-----------------------------] 1856/40702 frames (  4.6%)  [#-----------------------------] 1920/40702 frames (  4.7%)  [#-----------------------------] 1984/40702 frames (  4.9%)  [#-----------------------------] 2048/40702 frames (  5.0%)  [#-----------------------------] 2112/40702 frames (  5.2%)  [#-----------------------------] 2176/40702 frames (  5.3%)  [#-----------------------------] 2240/40702 frames (  5.5%)  [#-----------------------------] 2304/40702 frames (  5.7%)  [#-----------------------------] 2368/40702 frames (  5.8%)  [#-----------------------------] 2432/40702 frames (  6.0%)  [#-----------------------------] 2496/40702 frames (  6.1%)  [#-----------------------------] 2560/40702 frames (  6.3%)  [#-----------------------------] 2624/40702 frames (  6.4%)  [#-----------------------------] 2688/40702 frames (  6.6%)  [##----------------------------] 2752/40702 frames (  6.8%)  [##----------------------------] 2816/40702 frames (  6.9%)  [##----------------------------] 2880/40702 frames (  7.1%)  [##----------------------------] 2944/40702 frames (  7.2%)  [##----------------------------] 3008/40702 frames (  7.4%)  [##----------------------------] 3072/40702 frames (  7.5%)  [##----------------------------] 3136/40702 frames (  7.7%)  [##----------------------------] 3200/40702 frames (  7.9%)  [##----------------------------] 3264/40702 frames (  8.0%)  [##----------------------------] 3328/40702 frames (  8.2%)  [##----------------------------] 3392/40702 frames (  8.3%)  [##----------------------------] 3456/40702 frames (  8.5%)  [##----------------------------] 3520/40702 frames (  8.6%)  [##----------------------------] 3584/40702 frames (  8.8%)  [##----------------------------] 3648/40702 frames (  9.0%)  [##----------------------------] 3712/40702 frames (  9.1%)  [##----------------------------] 3776/40702 frames (  9.3%)  [##----------------------------] 3840/40702 frames (  9.4%)  [##----------------------------] 3904/40702 frames (  9.6%)  [##----------------------------] 3968/40702 frames (  9.7%)  [##----------------------------] 4032/40702 frames (  9.9%)  [###---------------------------] 4096/40702 frames ( 10.1%)  [###---------------------------] 4160/40702 frames ( 10.2%)  [###---------------------------] 4224/40702 frames ( 10.4%)  [###---------------------------] 4288/40702 frames ( 10.5%)  [###---------------------------] 4352/40702 frames ( 10.7%)  [###---------------------------] 4416/40702 frames ( 10.8%)  [###---------------------------] 4480/40702 frames ( 11.0%)  [###---------------------------] 4544/40702 frames ( 11.2%)  [###---------------------------] 4608/40702 frames ( 11.3%)  [###---------------------------] 4672/40702 frames ( 11.5%)  [###---------------------------] 4736/40702 frames ( 11.6%)  [###---------------------------] 4800/40702 frames ( 11.8%)  [###---------------------------] 4864/40702 frames ( 12.0%)  [###---------------------------] 4928/40702 frames ( 12.1%)  [###---------------------------] 4992/40702 frames ( 12.3%)  [###---------------------------] 5056/40702 frames ( 12.4%)  [###---------------------------] 5120/40702 frames ( 12.6%)  [###---------------------------] 5184/40702 frames ( 12.7%)  [###---------------------------] 5248/40702 frames ( 12.9%)  [###---------------------------] 5312/40702 frames ( 13.1%)  [###---------------------------] 5376/40702 frames ( 13.2%)  [####--------------------------] 5440/40702 frames ( 13.4%)  [####--------------------------] 5504/40702 frames ( 13.5%)  [####--------------------------] 5568/40702 frames ( 13.7%)  [####--------------------------] 5632/40702 frames ( 13.8%)  [####--------------------------] 5696/40702 frames ( 14.0%)  [####--------------------------] 5760/40702 frames ( 14.2%)  [####--------------------------] 5824/40702 frames ( 14.3%)  [####--------------------------] 5888/40702 frames ( 14.5%)  [####--------------------------] 5952/40702 frames ( 14.6%)  [####--------------------------] 6016/40702 frames ( 14.8%)  [####--------------------------] 6080/40702 frames ( 14.9%)  [####--------------------------] 6144/40702 frames ( 15.1%)  [####--------------------------] 6208/40702 frames ( 15.3%)  [####--------------------------] 6272/40702 frames ( 15.4%)  [####--------------------------] 6336/40702 frames ( 15.6%)  [####--------------------------] 6400/40702 frames ( 15.7%)  [####--------------------------] 6464/40702 frames ( 15.9%)  [####--------------------------] 6528/40702 frames ( 16.0%)  [####--------------------------] 6592/40702 frames ( 16.2%)  [####--------------------------] 6656/40702 frames ( 16.4%)  [####--------------------------] 6720/40702 frames ( 16.5%)  [#####-------------------------] 6784/40702 frames ( 16.7%)  [#####-------------------------] 6848/40702 frames ( 16.8%)  [#####-------------------------] 6912/40702 frames ( 17.0%)  [#####-------------------------] 6976/40702 frames ( 17.1%)  [#####-------------------------] 7040/40702 frames ( 17.3%)  [#####-------------------------] 7104/40702 frames ( 17.5%)  [#####-------------------------] 7168/40702 frames ( 17.6%)  [#####-------------------------] 7232/40702 frames ( 17.8%)  [#####-------------------------] 7296/40702 frames ( 17.9%)  [#####-------------------------] 7360/40702 frames ( 18.1%)  [#####-------------------------] 7424/40702 frames ( 18.2%)  [#####-------------------------] 7488/40702 frames ( 18.4%)  [#####-------------------------] 7552/40702 frames ( 18.6%)  [#####-------------------------] 7616/40702 frames ( 18.7%)  [#####-------------------------] 7680/40702 frames ( 18.9%)  [#####-------------------------] 7744/40702 frames ( 19.0%)  [#####-------------------------] 7808/40702 frames ( 19.2%)  [#####-------------------------] 7872/40702 frames ( 19.3%)  [#####-------------------------] 7936/40702 frames ( 19.5%)  [#####-------------------------] 8000/40702 frames ( 19.7%)  [#####-------------------------] 8064/40702 frames ( 19.8%)  [#####-------------------------] 8128/40702 frames ( 20.0%)  [######------------------------] 8192/40702 frames ( 20.1%)  [######------------------------] 8256/40702 frames ( 20.3%)  [######------------------------] 8320/40702 frames ( 20.4%)  [######------------------------] 8384/40702 frames ( 20.6%)  [######------------------------] 8448/40702 frames ( 20.8%)  [######------------------------] 8512/40702 frames ( 20.9%)  [######------------------------] 8576/40702 frames ( 21.1%)  [######------------------------] 8640/40702 frames ( 21.2%)  [######------------------------] 8704/40702 frames ( 21.4%)  [######------------------------] 8768/40702 frames ( 21.5%)  [######------------------------] 8832/40702 frames ( 21.7%)  [######------------------------] 8896/40702 frames ( 21.9%)  [######------------------------] 8960/40702 frames ( 22.0%)  [######------------------------] 9024/40702 frames ( 22.2%)  [######------------------------] 9088/40702 frames ( 22.3%)  [######------------------------] 9152/40702 frames ( 22.5%)  [######------------------------] 9216/40702 frames ( 22.6%)  [######------------------------] 9280/40702 frames ( 22.8%)  [######------------------------] 9344/40702 frames ( 23.0%)  [######------------------------] 9408/40702 frames ( 23.1%)  [######------------------------] 9472/40702 frames ( 23.3%)  [#######-----------------------] 9536/40702 frames ( 23.4%)  [#######-----------------------] 9600/40702 frames ( 23.6%)  [#######-----------------------] 9664/40702 frames ( 23.7%)  [#######-----------------------] 9728/40702 frames ( 23.9%)  [#######-----------------------] 9792/40702 frames ( 24.1%)  [#######-----------------------] 9856/40702 frames ( 24.2%)  [#######-----------------------] 9920/40702 frames ( 24.4%)  [#######-----------------------] 9984/40702 frames ( 24.5%)  [#######-----------------------] 10048/40702 frames ( 24.7%)  [#######-----------------------] 10112/40702 frames ( 24.8%)  [#######-----------------------] 10176/40702 frames ( 25.0%)  [#######-----------------------] 10240/40702 frames ( 25.2%)  [#######-----------------------] 10304/40702 frames ( 25.3%)  [#######-----------------------] 10368/40702 frames ( 25.5%)  [#######-----------------------] 10432/40702 frames ( 25.6%)  [#######-----------------------] 10496/40702 frames ( 25.8%)  [#######-----------------------] 10560/40702 frames ( 25.9%)  [#######-----------------------] 10624/40702 frames ( 26.1%)  [#######-----------------------] 10688/40702 frames ( 26.3%)  [#######-----------------------] 10752/40702 frames ( 26.4%)  [#######-----------------------] 10816/40702 frames ( 26.6%)  [########----------------------] 10880/40702 frames ( 26.7%)  [########----------------------] 10944/40702 frames ( 26.9%)  [########----------------------] 11008/40702 frames ( 27.0%)  [########----------------------] 11072/40702 frames ( 27.2%)  [########----------------------] 11136/40702 frames ( 27.4%)  [########----------------------] 11200/40702 frames ( 27.5%)  [########----------------------] 11264/40702 frames ( 27.7%)  [########----------------------] 11328/40702 frames ( 27.8%)  [########----------------------] 11392/40702 frames ( 28.0%)  [########----------------------] 11456/40702 frames ( 28.1%)  [########----------------------] 11520/40702 frames ( 28.3%)  [########----------------------] 11584/40702 frames ( 28.5%)  [########----------------------] 11648/40702 frames ( 28.6%)  [########----------------------] 11712/40702 frames ( 28.8%)  [########----------------------] 11776/40702 frames ( 28.9%)  [########----------------------] 11840/40702 frames ( 29.1%)  [########----------------------] 11904/40702 frames ( 29.2%)  [########----------------------] 11968/40702 frames ( 29.4%)  [########----------------------] 12032/40702 frames ( 29.6%)  [########----------------------] 12096/40702 frames ( 29.7%)  [########----------------------] 12160/40702 frames ( 29.9%)  [#########---------------------] 12224/40702 frames ( 30.0%)  [#########---------------------] 12288/40702 frames ( 30.2%)  [#########---------------------] 12352/40702 frames ( 30.3%)  [#########---------------------] 12416/40702 frames ( 30.5%)  [#########---------------------] 12480/40702 frames ( 30.7%)  [#########---------------------] 12544/40702 frames ( 30.8%)  [#########---------------------] 12608/40702 frames ( 31.0%)  [#########---------------------] 12672/40702 frames ( 31.1%)  [#########---------------------] 12736/40702 frames ( 31.3%)  [#########---------------------] 12800/40702 frames ( 31.4%)  [#########---------------------] 12864/40702 frames ( 31.6%)  [#########---------------------] 12928/40702 frames ( 31.8%)  [#########---------------------] 12992/40702 frames ( 31.9%)  [#########---------------------] 13056/40702 frames ( 32.1%)  [#########---------------------] 13120/40702 frames ( 32.2%)  [#########---------------------] 13184/40702 frames ( 32.4%)  [#########---------------------] 13248/40702 frames ( 32.5%)  [#########---------------------] 13312/40702 frames ( 32.7%)  [#########---------------------] 13376/40702 frames ( 32.9%)  [#########---------------------] 13440/40702 frames ( 33.0%)  [#########---------------------] 13504/40702 frames ( 33.2%)  [##########--------------------] 13568/40702 frames ( 33.3%)  [##########--------------------] 13632/40702 frames ( 33.5%)  [##########--------------------] 13696/40702 frames ( 33.6%)  [##########--------------------] 13760/40702 frames ( 33.8%)  [##########--------------------] 13824/40702 frames ( 34.0%)  [##########--------------------] 13888/40702 frames ( 34.1%)  [##########--------------------] 13952/40702 frames ( 34.3%)  [##########--------------------] 14016/40702 frames ( 34.4%)  [##########--------------------] 14080/40702 frames ( 34.6%)  [##########--------------------] 14144/40702 frames ( 34.8%)  [##########--------------------] 14208/40702 frames ( 34.9%)  [##########--------------------] 14272/40702 frames ( 35.1%)  [##########--------------------] 14336/40702 frames ( 35.2%)  [##########--------------------] 14400/40702 frames ( 35.4%)  [##########--------------------] 14464/40702 frames ( 35.5%)  [##########--------------------] 14528/40702 frames ( 35.7%)  [##########--------------------] 14592/40702 frames ( 35.9%)  [##########--------------------] 14656/40702 frames ( 36.0%)  [##########--------------------] 14720/40702 frames ( 36.2%)  [##########--------------------] 14784/40702 frames ( 36.3%)  [##########--------------------] 14848/40702 frames ( 36.5%)  [##########--------------------] 14912/40702 frames ( 36.6%)  [###########-------------------] 14976/40702 frames ( 36.8%)  [###########-------------------] 15040/40702 frames ( 37.0%)  [###########-------------------] 15104/40702 frames ( 37.1%)  [###########-------------------] 15168/40702 frames ( 37.3%)  [###########-------------------] 15232/40702 frames ( 37.4%)  [###########-------------------] 15296/40702 frames ( 37.6%)  [###########-------------------] 15360/40702 frames ( 37.7%)  [###########-------------------] 15424/40702 frames ( 37.9%)  [###########-------------------] 15488/40702 frames ( 38.1%)  [###########-------------------] 15552/40702 frames ( 38.2%)  [###########-------------------] 15616/40702 frames ( 38.4%)  [###########-------------------] 15680/40702 frames ( 38.5%)  [###########-------------------] 15744/40702 frames ( 38.7%)  [###########-------------------] 15808/40702 frames ( 38.8%)  [###########-------------------] 15872/40702 frames ( 39.0%)  [###########-------------------] 15936/40702 frames ( 39.2%)  [###########-------------------] 16000/40702 frames ( 39.3%)  [###########-------------------] 16064/40702 frames ( 39.5%)  [###########-------------------] 16128/40702 frames ( 39.6%)  [###########-------------------] 16192/40702 frames ( 39.8%)  [###########-------------------] 16256/40702 frames ( 39.9%)  [############------------------] 16320/40702 frames ( 40.1%)  [############------------------] 16384/40702 frames ( 40.3%)  [############------------------] 16448/40702 frames ( 40.4%)  [############------------------] 16512/40702 frames ( 40.6%)  [############------------------] 16576/40702 frames ( 40.7%)  [############------------------] 16640/40702 frames ( 40.9%)  [############------------------] 16704/40702 frames ( 41.0%)  [############------------------] 16768/40702 frames ( 41.2%)  [############------------------] 16832/40702 frames ( 41.4%)  [############------------------] 16896/40702 frames ( 41.5%)  [############------------------] 16960/40702 frames ( 41.7%)  [############------------------] 17024/40702 frames ( 41.8%)  [############------------------] 17088/40702 frames ( 42.0%)  [############------------------] 17152/40702 frames ( 42.1%)  [############------------------] 17216/40702 frames ( 42.3%)  [############------------------] 17280/40702 frames ( 42.5%)  [############------------------] 17344/40702 frames ( 42.6%)  [############------------------] 17408/40702 frames ( 42.8%)  [############------------------] 17472/40702 frames ( 42.9%)  [############------------------] 17536/40702 frames ( 43.1%)  [############------------------] 17600/40702 frames ( 43.2%)  [#############-----------------] 17664/40702 frames ( 43.4%)  [#############-----------------] 17728/40702 frames ( 43.6%)  [#############-----------------] 17792/40702 frames ( 43.7%)  [#############-----------------] 17856/40702 frames ( 43.9%)  [#############-----------------] 17920/40702 frames ( 44.0%)  [#############-----------------] 17984/40702 frames ( 44.2%)  [#############-----------------] 18048/40702 frames ( 44.3%)  [#############-----------------] 18112/40702 frames ( 44.5%)  [#############-----------------] 18176/40702 frames ( 44.7%)  [#############-----------------] 18240/40702 frames ( 44.8%)  [#############-----------------] 18304/40702 frames ( 45.0%)  [#############-----------------] 18368/40702 frames ( 45.1%)  [#############-----------------] 18432/40702 frames ( 45.3%)  [#############-----------------] 18496/40702 frames ( 45.4%)  [#############-----------------] 18560/40702 frames ( 45.6%)  [#############-----------------] 18624/40702 frames ( 45.8%)  [#############-----------------] 18688/40702 frames ( 45.9%)  [#############-----------------] 18752/40702 frames ( 46.1%)  [#############-----------------] 18816/40702 frames ( 46.2%)  [#############-----------------] 18880/40702 frames ( 46.4%)  [#############-----------------] 18944/40702 frames ( 46.5%)  [##############----------------] 19008/40702 frames ( 46.7%)  [##############----------------] 19072/40702 frames ( 46.9%)  [##############----------------] 19136/40702 frames ( 47.0%)  [##############----------------] 19200/40702 frames ( 47.2%)  [##############----------------] 19264/40702 frames ( 47.3%)  [##############----------------] 19328/40702 frames ( 47.5%)  [##############----------------] 19392/40702 frames ( 47.6%)  [##############----------------] 19456/40702 frames ( 47.8%)  [##############----------------] 19520/40702 frames ( 48.0%)  [##############----------------] 19584/40702 frames ( 48.1%)  [##############----------------] 19648/40702 frames ( 48.3%)  [##############----------------] 19712/40702 frames ( 48.4%)  [##############----------------] 19776/40702 frames ( 48.6%)  [##############----------------] 19840/40702 frames ( 48.7%)  [##############----------------] 19904/40702 frames ( 48.9%)  [##############----------------] 19968/40702 frames ( 49.1%)  [##############----------------] 20032/40702 frames ( 49.2%)  [##############----------------] 20096/40702 frames ( 49.4%)  [##############----------------] 20160/40702 frames ( 49.5%)  [##############----------------] 20224/40702 frames ( 49.7%)  [##############----------------] 20288/40702 frames ( 49.8%)  [###############---------------] 20352/40702 frames ( 50.0%)  [###############---------------] 20416/40702 frames ( 50.2%)  [###############---------------] 20480/40702 frames ( 50.3%)  [###############---------------] 20544/40702 frames ( 50.5%)  [###############---------------] 20608/40702 frames ( 50.6%)  [###############---------------] 20672/40702 frames ( 50.8%)  [###############---------------] 20736/40702 frames ( 50.9%)  [###############---------------] 20800/40702 frames ( 51.1%)  [###############---------------] 20864/40702 frames ( 51.3%)  [###############---------------] 20928/40702 frames ( 51.4%)  [###############---------------] 20992/40702 frames ( 51.6%)  [###############---------------] 21056/40702 frames ( 51.7%)  [###############---------------] 21120/40702 frames ( 51.9%)  [###############---------------] 21184/40702 frames ( 52.0%)  [###############---------------] 21248/40702 frames ( 52.2%)  [###############---------------] 21312/40702 frames ( 52.4%)  [###############---------------] 21376/40702 frames ( 52.5%)  [###############---------------] 21440/40702 frames ( 52.7%)  [###############---------------] 21504/40702 frames ( 52.8%)  [###############---------------] 21568/40702 frames ( 53.0%)  [###############---------------] 21632/40702 frames ( 53.1%)  [###############---------------] 21696/40702 frames ( 53.3%)  [################--------------] 21760/40702 frames ( 53.5%)  [################--------------] 21824/40702 frames ( 53.6%)  [################--------------] 21888/40702 frames ( 53.8%)  [################--------------] 21952/40702 frames ( 53.9%)  [################--------------] 22016/40702 frames ( 54.1%)  [################--------------] 22080/40702 frames ( 54.2%)  [################--------------] 22144/40702 frames ( 54.4%)  [################--------------] 22208/40702 frames ( 54.6%)  [################--------------] 22272/40702 frames ( 54.7%)  [################--------------] 22336/40702 frames ( 54.9%)  [################--------------] 22400/40702 frames ( 55.0%)  [################--------------] 22464/40702 frames ( 55.2%)  [################--------------] 22528/40702 frames ( 55.3%)  [################--------------] 22592/40702 frames ( 55.5%)  [################--------------] 22656/40702 frames ( 55.7%)  [################--------------] 22720/40702 frames ( 55.8%)  [################--------------] 22784/40702 frames ( 56.0%)  [################--------------] 22848/40702 frames ( 56.1%)  [################--------------] 22912/40702 frames ( 56.3%)  [################--------------] 22976/40702 frames ( 56.4%)  [################--------------] 23040/40702 frames ( 56.6%)  [#################-------------] 23104/40702 frames ( 56.8%)  [#################-------------] 23168/40702 frames ( 56.9%)  [#################-------------] 23232/40702 frames ( 57.1%)  [#################-------------] 23296/40702 frames ( 57.2%)  [#################-------------] 23360/40702 frames ( 57.4%)  [#################-------------] 23424/40702 frames ( 57.5%)  [#################-------------] 23488/40702 frames ( 57.7%)  [#################-------------] 23552/40702 frames ( 57.9%)  [#################-------------] 23616/40702 frames ( 58.0%)  [#################-------------] 23680/40702 frames ( 58.2%)  [#################-------------] 23744/40702 frames ( 58.3%)  [#################-------------] 23808/40702 frames ( 58.5%)  [#################-------------] 23872/40702 frames ( 58.7%)  [#################-------------] 23936/40702 frames ( 58.8%)  [#################-------------] 24000/40702 frames ( 59.0%)  [#################-------------] 24064/40702 frames ( 59.1%)  [#################-------------] 24128/40702 frames ( 59.3%)  [#################-------------] 24192/40702 frames ( 59.4%)  [#################-------------] 24256/40702 frames ( 59.6%)  [#################-------------] 24320/40702 frames ( 59.8%)  [#################-------------] 24384/40702 frames ( 59.9%)  [##################------------] 24448/40702 frames ( 60.1%)  [##################------------] 24512/40702 frames ( 60.2%)  [##################------------] 24576/40702 frames ( 60.4%)  [##################------------] 24640/40702 frames ( 60.5%)  [##################------------] 24704/40702 frames ( 60.7%)  [##################------------] 24768/40702 frames ( 60.9%)  [##################------------] 24832/40702 frames ( 61.0%)  [##################------------] 24896/40702 frames ( 61.2%)  [##################------------] 24960/40702 frames ( 61.3%)  [##################------------] 25024/40702 frames ( 61.5%)  [##################------------] 25088/40702 frames ( 61.6%)  [##################------------] 25152/40702 frames ( 61.8%)  [##################------------] 25216/40702 frames ( 62.0%)  [##################------------] 25280/40702 frames ( 62.1%)  [##################------------] 25344/40702 frames ( 62.3%)  [##################------------] 25408/40702 frames ( 62.4%)  [##################------------] 25472/40702 frames ( 62.6%)  [##################------------] 25536/40702 frames ( 62.7%)  [##################------------] 25600/40702 frames ( 62.9%)  [##################------------] 25664/40702 frames ( 63.1%)  [##################------------] 25728/40702 frames ( 63.2%)  [###################-----------] 25792/40702 frames ( 63.4%)  [###################-----------] 25856/40702 frames ( 63.5%)  [###################-----------] 25920/40702 frames ( 63.7%)  [###################-----------] 25984/40702 frames ( 63.8%)  [###################-----------] 26048/40702 frames ( 64.0%)  [###################-----------] 26112/40702 frames ( 64.2%)  [###################-----------] 26176/40702 frames ( 64.3%)  [###################-----------] 26240/40702 frames ( 64.5%)  [###################-----------] 26304/40702 frames ( 64.6%)  [###################-----------] 26368/40702 frames ( 64.8%)  [###################-----------] 26432/40702 frames ( 64.9%)  [###################-----------] 26496/40702 frames ( 65.1%)  [###################-----------] 26560/40702 frames ( 65.3%)  [###################-----------] 26624/40702 frames ( 65.4%)  [###################-----------] 26688/40702 frames ( 65.6%)  [###################-----------] 26752/40702 frames ( 65.7%)  [###################-----------] 26816/40702 frames ( 65.9%)  [###################-----------] 26880/40702 frames ( 66.0%)  [###################-----------] 26944/40702 frames ( 66.2%)  [###################-----------] 27008/40702 frames ( 66.4%)  [###################-----------] 27072/40702 frames ( 66.5%)  [####################----------] 27136/40702 frames ( 66.7%)  [####################----------] 27200/40702 frames ( 66.8%)  [####################----------] 27264/40702 frames ( 67.0%)  [####################----------] 27328/40702 frames ( 67.1%)  [####################----------] 27392/40702 frames ( 67.3%)  [####################----------] 27456/40702 frames ( 67.5%)  [####################----------] 27520/40702 frames ( 67.6%)  [####################----------] 27584/40702 frames ( 67.8%)  [####################----------] 27648/40702 frames ( 67.9%)  [####################----------] 27712/40702 frames ( 68.1%)  [####################----------] 27776/40702 frames ( 68.2%)  [####################----------] 27840/40702 frames ( 68.4%)  [####################----------] 27904/40702 frames ( 68.6%)  [####################----------] 27968/40702 frames ( 68.7%)  [####################----------] 28032/40702 frames ( 68.9%)  [####################----------] 28096/40702 frames ( 69.0%)  [####################----------] 28160/40702 frames ( 69.2%)  [####################----------] 28224/40702 frames ( 69.3%)  [####################----------] 28288/40702 frames ( 69.5%)  [####################----------] 28352/40702 frames ( 69.7%)  [####################----------] 28416/40702 frames ( 69.8%)  [####################----------] 28480/40702 frames ( 70.0%)  [#####################---------] 28544/40702 frames ( 70.1%)  [#####################---------] 28608/40702 frames ( 70.3%)  [#####################---------] 28672/40702 frames ( 70.4%)  [#####################---------] 28736/40702 frames ( 70.6%)  [#####################---------] 28800/40702 frames ( 70.8%)  [#####################---------] 28864/40702 frames ( 70.9%)  [#####################---------] 28928/40702 frames ( 71.1%)  [#####################---------] 28992/40702 frames ( 71.2%)  [#####################---------] 29056/40702 frames ( 71.4%)  [#####################---------] 29120/40702 frames ( 71.5%)  [#####################---------] 29184/40702 frames ( 71.7%)  [#####################---------] 29248/40702 frames ( 71.9%)  [#####################---------] 29312/40702 frames ( 72.0%)  [#####################---------] 29376/40702 frames ( 72.2%)  [#####################---------] 29440/40702 frames ( 72.3%)  [#####################---------] 29504/40702 frames ( 72.5%)  [#####################---------] 29568/40702 frames ( 72.6%)  [#####################---------] 29632/40702 frames ( 72.8%)  [#####################---------] 29696/40702 frames ( 73.0%)  [#####################---------] 29760/40702 frames ( 73.1%)  [#####################---------] 29824/40702 frames ( 73.3%)  [######################--------] 29888/40702 frames ( 73.4%)  [######################--------] 29952/40702 frames ( 73.6%)  [######################--------] 30016/40702 frames ( 73.7%)  [######################--------] 30080/40702 frames ( 73.9%)  [######################--------] 30144/40702 frames ( 74.1%)  [######################--------] 30208/40702 frames ( 74.2%)  [######################--------] 30272/40702 frames ( 74.4%)  [######################--------] 30336/40702 frames ( 74.5%)  [######################--------] 30400/40702 frames ( 74.7%)  [######################--------] 30464/40702 frames ( 74.8%)  [######################--------] 30528/40702 frames ( 75.0%)  [######################--------] 30592/40702 frames ( 75.2%)  [######################--------] 30656/40702 frames ( 75.3%)  [######################--------] 30720/40702 frames ( 75.5%)  [######################--------] 30784/40702 frames ( 75.6%)  [######################--------] 30848/40702 frames ( 75.8%)  [######################--------] 30912/40702 frames ( 75.9%)  [######################--------] 30976/40702 frames ( 76.1%)  [######################--------] 31040/40702 frames ( 76.3%)  [######################--------] 31104/40702 frames ( 76.4%)  [######################--------] 31168/40702 frames ( 76.6%)  [#######################-------] 31232/40702 frames ( 76.7%)  [#######################-------] 31296/40702 frames ( 76.9%)  [#######################-------] 31360/40702 frames ( 77.0%)  [#######################-------] 31424/40702 frames ( 77.2%)  [#######################-------] 31488/40702 frames ( 77.4%)  [#######################-------] 31552/40702 frames ( 77.5%)  [#######################-------] 31616/40702 frames ( 77.7%)  [#######################-------] 31680/40702 frames ( 77.8%)  [#######################-------] 31744/40702 frames ( 78.0%)  [#######################-------] 31808/40702 frames ( 78.1%)  [#######################-------] 31872/40702 frames ( 78.3%)  [#######################-------] 31936/40702 frames ( 78.5%)  [#######################-------] 32000/40702 frames ( 78.6%)  [#######################-------] 32064/40702 frames ( 78.8%)  [#######################-------] 32128/40702 frames ( 78.9%)  [#######################-------] 32192/40702 frames ( 79.1%)  [#######################-------] 32256/40702 frames ( 79.2%)  [#######################-------] 32320/40702 frames ( 79.4%)  [#######################-------] 32384/40702 frames ( 79.6%)  [#######################-------] 32448/40702 frames ( 79.7%)  [#######################-------] 32512/40702 frames ( 79.9%)  [########################------] 32576/40702 frames ( 80.0%)  [########################------] 32640/40702 frames ( 80.2%)  [########################------] 32704/40702 frames ( 80.3%)  [########################------] 32768/40702 frames ( 80.5%)  [########################------] 32832/40702 frames ( 80.7%)  [########################------] 32896/40702 frames ( 80.8%)  [########################------] 32960/40702 frames ( 81.0%)  [########################------] 33024/40702 frames ( 81.1%)  [########################------] 33088/40702 frames ( 81.3%)  [########################------] 33152/40702 frames ( 81.5%)  [########################------] 33216/40702 frames ( 81.6%)  [########################------] 33280/40702 frames ( 81.8%)  [########################------] 33344/40702 frames ( 81.9%)  [########################------] 33408/40702 frames ( 82.1%)  [########################------] 33472/40702 frames ( 82.2%)  [########################------] 33536/40702 frames ( 82.4%)  [########################------] 33600/40702 frames ( 82.6%)  [########################------] 33664/40702 frames ( 82.7%)  [########################------] 33728/40702 frames ( 82.9%)  [########################------] 33792/40702 frames ( 83.0%)  [########################------] 33856/40702 frames ( 83.2%)  [#########################-----] 33920/40702 frames ( 83.3%)  [#########################-----] 33984/40702 frames ( 83.5%)  [#########################-----] 34048/40702 frames ( 83.7%)  [#########################-----] 34112/40702 frames ( 83.8%)  [#########################-----] 34176/40702 frames ( 84.0%)  [#########################-----] 34240/40702 frames ( 84.1%)  [#########################-----] 34304/40702 frames ( 84.3%)  [#########################-----] 34368/40702 frames ( 84.4%)  [#########################-----] 34432/40702 frames ( 84.6%)  [#########################-----] 34496/40702 frames ( 84.8%)  [#########################-----] 34560/40702 frames ( 84.9%)  [#########################-----] 34624/40702 frames ( 85.1%)  [#########################-----] 34688/40702 frames ( 85.2%)  [#########################-----] 34752/40702 frames ( 85.4%)  [#########################-----] 34816/40702 frames ( 85.5%)  [#########################-----] 34880/40702 frames ( 85.7%)  [#########################-----] 34944/40702 frames ( 85.9%)  [#########################-----] 35008/40702 frames ( 86.0%)  [#########################-----] 35072/40702 frames ( 86.2%)  [#########################-----] 35136/40702 frames ( 86.3%)  [#########################-----] 35200/40702 frames ( 86.5%)  [#########################-----] 35264/40702 frames ( 86.6%)  [##########################----] 35328/40702 frames ( 86.8%)  [##########################----] 35392/40702 frames ( 87.0%)  [##########################----] 35456/40702 frames ( 87.1%)  [##########################----] 35520/40702 frames ( 87.3%)  [##########################----] 35584/40702 frames ( 87.4%)  [##########################----] 35648/40702 frames ( 87.6%)  [##########################----] 35712/40702 frames ( 87.7%)  [##########################----] 35776/40702 frames ( 87.9%)  [##########################----] 35840/40702 frames ( 88.1%)  [##########################----] 35904/40702 frames ( 88.2%)  [##########################----] 35968/40702 frames ( 88.4%)  [##########################----] 36032/40702 frames ( 88.5%)  [##########################----] 36096/40702 frames ( 88.7%)  [##########################----] 36160/40702 frames ( 88.8%)  [##########################----] 36224/40702 frames ( 89.0%)  [##########################----] 36288/40702 frames ( 89.2%)  [##########################----] 36352/40702 frames ( 89.3%)  [##########################----] 36416/40702 frames ( 89.5%)  [##########################----] 36480/40702 frames ( 89.6%)  [##########################----] 36544/40702 frames ( 89.8%)  [##########################----] 36608/40702 frames ( 89.9%)  [###########################---] 36672/40702 frames ( 90.1%)  [###########################---] 36736/40702 frames ( 90.3%)  [###########################---] 36800/40702 frames ( 90.4%)  [###########################---] 36864/40702 frames ( 90.6%)  [###########################---] 36928/40702 frames ( 90.7%)  [###########################---] 36992/40702 frames ( 90.9%)  [###########################---] 37056/40702 frames ( 91.0%)  [###########################---] 37120/40702 frames ( 91.2%)  [###########################---] 37184/40702 frames ( 91.4%)  [###########################---] 37248/40702 frames ( 91.5%)  [###########################---] 37312/40702 frames ( 91.7%)  [###########################---] 37376/40702 frames ( 91.8%)  [###########################---] 37440/40702 frames ( 92.0%)  [###########################---] 37504/40702 frames ( 92.1%)  [###########################---] 37568/40702 frames ( 92.3%)  [###########################---] 37632/40702 frames ( 92.5%)  [###########################---] 37696/40702 frames ( 92.6%)  [###########################---] 37760/40702 frames ( 92.8%)  [###########################---] 37824/40702 frames ( 92.9%)  [###########################---] 37888/40702 frames ( 93.1%)  [###########################---] 37952/40702 frames ( 93.2%)  [############################--] 38016/40702 frames ( 93.4%)  [############################--] 38080/40702 frames ( 93.6%)  [############################--] 38144/40702 frames ( 93.7%)  [############################--] 38208/40702 frames ( 93.9%)  [############################--] 38272/40702 frames ( 94.0%)  [############################--] 38336/40702 frames ( 94.2%)  [############################--] 38400/40702 frames ( 94.3%)  [############################--] 38464/40702 frames ( 94.5%)  [############################--] 38528/40702 frames ( 94.7%)  [############################--] 38592/40702 frames ( 94.8%)  [############################--] 38656/40702 frames ( 95.0%)  [############################--] 38720/40702 frames ( 95.1%)  [############################--] 38784/40702 frames ( 95.3%)  [############################--] 38848/40702 frames ( 95.4%)  [############################--] 38912/40702 frames ( 95.6%)  [############################--] 38976/40702 frames ( 95.8%)  [############################--] 39040/40702 frames ( 95.9%)  [############################--] 39104/40702 frames ( 96.1%)  [############################--] 39168/40702 frames ( 96.2%)  [############################--] 39232/40702 frames ( 96.4%)  [############################--] 39296/40702 frames ( 96.5%)  [#############################-] 39360/40702 frames ( 96.7%)  [#############################-] 39424/40702 frames ( 96.9%)  [#############################-] 39488/40702 frames ( 97.0%)  [#############################-] 39552/40702 frames ( 97.2%)  [#############################-] 39616/40702 frames ( 97.3%)  [#############################-] 39680/40702 frames ( 97.5%)  [#############################-] 39744/40702 frames ( 97.6%)  [#############################-] 39808/40702 frames ( 97.8%)  [#############################-] 39872/40702 frames ( 98.0%)  [#############################-] 39936/40702 frames ( 98.1%)  [#############################-] 40000/40702 frames ( 98.3%)  [#############################-] 40064/40702 frames ( 98.4%)  [#############################-] 40128/40702 frames ( 98.6%)  [#############################-] 40192/40702 frames ( 98.7%)  [#############################-] 40256/40702 frames ( 98.9%)  [#############################-] 40320/40702 frames ( 99.1%)  [#############################-] 40384/40702 frames ( 99.2%)  [#############################-] 40448/40702 frames ( 99.4%)  [#############################-] 40512/40702 frames ( 99.5%)  [#############################-] 40576/40702 frames ( 99.7%)  [#############################-] 40640/40702 frames ( 99.8%)  [##############################] 40702/40702 frames (100.0%)
+  [training video 70 11-18.mp4] duration 678.4s -> contours from models/videos/
+  [training video 70 11-18.mp4] Dash slot: RIGHT (slot2)  (avg contours: 2.08)  [forced RIGHT: video #70 >= 67]
+  [training video 70 11-18.mp4] pred 112 / gt 113 dashes  (err -1; tp 108 fp 4 fn 5)
+  torchcodec GPU decode unavailable on training video 76 10-25.mp4 (Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.6.0+cu124) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core7.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core6.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\libtorchcodec_core5.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchcodec\_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\adhit\AppData\Local\Programs\Python\Python311\Lib\ctypes\__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 127] The specified procedure could not be found
+[end of libtorchcodec loading traceback].); trying decord/OpenCV.
+  [------------------------------] 64/37505 frames (  0.2%)  [------------------------------] 128/37505 frames (  0.3%)  [------------------------------] 192/37505 frames (  0.5%)  [------------------------------] 256/37505 frames (  0.7%)  [------------------------------] 320/37505 frames (  0.9%)  [------------------------------] 384/37505 frames (  1.0%)  [------------------------------] 448/37505 frames (  1.2%)  [------------------------------] 512/37505 frames (  1.4%)  [------------------------------] 576/37505 frames (  1.5%)  [------------------------------] 640/37505 frames (  1.7%)  [------------------------------] 704/37505 frames (  1.9%)  [------------------------------] 768/37505 frames (  2.0%)  [------------------------------] 832/37505 frames (  2.2%)  [------------------------------] 896/37505 frames (  2.4%)  [------------------------------] 960/37505 frames (  2.6%)  [------------------------------] 1024/37505 frames (  2.7%)  [------------------------------] 1088/37505 frames (  2.9%)  [------------------------------] 1152/37505 frames (  3.1%)  [------------------------------] 1216/37505 frames (  3.2%)  [#-----------------------------] 1280/37505 frames (  3.4%)  [#-----------------------------] 1344/37505 frames (  3.6%)  [#-----------------------------] 1408/37505 frames (  3.8%)  [#-----------------------------] 1472/37505 frames (  3.9%)  [#-----------------------------] 1536/37505 frames (  4.1%)  [#-----------------------------] 1600/37505 frames (  4.3%)  [#-----------------------------] 1664/37505 frames (  4.4%)  [#-----------------------------] 1728/37505 frames (  4.6%)  [#-----------------------------] 1792/37505 frames (  4.8%)  [#-----------------------------] 1856/37505 frames (  4.9%)  [#-----------------------------] 1920/37505 frames (  5.1%)  [#-----------------------------] 1984/37505 frames (  5.3%)  [#-----------------------------] 2048/37505 frames (  5.5%)  [#-----------------------------] 2112/37505 frames (  5.6%)  [#-----------------------------] 2176/37505 frames (  5.8%)  [#-----------------------------] 2240/37505 frames (  6.0%)  [#-----------------------------] 2304/37505 frames (  6.1%)  [#-----------------------------] 2368/37505 frames (  6.3%)  [#-----------------------------] 2432/37505 frames (  6.5%)  [#-----------------------------] 2496/37505 frames (  6.7%)  [##----------------------------] 2560/37505 frames (  6.8%)  [##----------------------------] 2624/37505 frames (  7.0%)  [##----------------------------] 2688/37505 frames (  7.2%)  [##----------------------------] 2752/37505 frames (  7.3%)  [##----------------------------] 2816/37505 frames (  7.5%)  [##----------------------------] 2880/37505 frames (  7.7%)  [##----------------------------] 2944/37505 frames (  7.8%)  [##----------------------------] 3008/37505 frames (  8.0%)  [##----------------------------] 3072/37505 frames (  8.2%)  [##----------------------------] 3136/37505 frames (  8.4%)  [##----------------------------] 3200/37505 frames (  8.5%)  [##----------------------------] 3264/37505 frames (  8.7%)  [##----------------------------] 3328/37505 frames (  8.9%)  [##----------------------------] 3392/37505 frames (  9.0%)  [##----------------------------] 3456/37505 frames (  9.2%)  [##----------------------------] 3520/37505 frames (  9.4%)  [##----------------------------] 3584/37505 frames (  9.6%)  [##----------------------------] 3648/37505 frames (  9.7%)  [##----------------------------] 3712/37505 frames (  9.9%)  [###---------------------------] 3776/37505 frames ( 10.1%)  [###---------------------------] 3840/37505 frames ( 10.2%)  [###---------------------------] 3904/37505 frames ( 10.4%)  [###---------------------------] 3968/37505 frames ( 10.6%)  [###---------------------------] 4032/37505 frames ( 10.8%)  [###---------------------------] 4096/37505 frames ( 10.9%)  [###---------------------------] 4160/37505 frames ( 11.1%)  [###---------------------------] 4224/37505 frames ( 11.3%)  [###---------------------------] 4288/37505 frames ( 11.4%)  [###---------------------------] 4352/37505 frames ( 11.6%)  [###---------------------------] 4416/37505 frames ( 11.8%)  [###---------------------------] 4480/37505 frames ( 11.9%)  [###---------------------------] 4544/37505 frames ( 12.1%)  [###---------------------------] 4608/37505 frames ( 12.3%)  [###---------------------------] 4672/37505 frames ( 12.5%)  [###---------------------------] 4736/37505 frames ( 12.6%)  [###---------------------------] 4800/37505 frames ( 12.8%)  [###---------------------------] 4864/37505 frames ( 13.0%)  [###---------------------------] 4928/37505 frames ( 13.1%)  [###---------------------------] 4992/37505 frames ( 13.3%)  [####--------------------------] 5056/37505 frames ( 13.5%)  [####--------------------------] 5120/37505 frames ( 13.7%)  [####--------------------------] 5184/37505 frames ( 13.8%)  [####--------------------------] 5248/37505 frames ( 14.0%)  [####--------------------------] 5312/37505 frames ( 14.2%)  [####--------------------------] 5376/37505 frames ( 14.3%)  [####--------------------------] 5440/37505 frames ( 14.5%)  [####--------------------------] 5504/37505 frames ( 14.7%)  [####--------------------------] 5568/37505 frames ( 14.8%)  [####--------------------------] 5632/37505 frames ( 15.0%)  [####--------------------------] 5696/37505 frames ( 15.2%)  [####--------------------------] 5760/37505 frames ( 15.4%)  [####--------------------------] 5824/37505 frames ( 15.5%)  [####--------------------------] 5888/37505 frames ( 15.7%)  [####--------------------------] 5952/37505 frames ( 15.9%)  [####--------------------------] 6016/37505 frames ( 16.0%)  [####--------------------------] 6080/37505 frames ( 16.2%)  [####--------------------------] 6144/37505 frames ( 16.4%)  [####--------------------------] 6208/37505 frames ( 16.6%)  [#####-------------------------] 6272/37505 frames ( 16.7%)  [#####-------------------------] 6336/37505 frames ( 16.9%)  [#####-------------------------] 6400/37505 frames ( 17.1%)  [#####-------------------------] 6464/37505 frames ( 17.2%)  [#####-------------------------] 6528/37505 frames ( 17.4%)  [#####-------------------------] 6592/37505 frames ( 17.6%)  [#####-------------------------] 6656/37505 frames ( 17.7%)  [#####-------------------------] 6720/37505 frames ( 17.9%)  [#####-------------------------] 6784/37505 frames ( 18.1%)  [#####-------------------------] 6848/37505 frames ( 18.3%)  [#####-------------------------] 6912/37505 frames ( 18.4%)  [#####-------------------------] 6976/37505 frames ( 18.6%)  [#####-------------------------] 7040/37505 frames ( 18.8%)  [#####-------------------------] 7104/37505 frames ( 18.9%)  [#####-------------------------] 7168/37505 frames ( 19.1%)  [#####-------------------------] 7232/37505 frames ( 19.3%)  [#####-------------------------] 7296/37505 frames ( 19.5%)  [#####-------------------------] 7360/37505 frames ( 19.6%)  [#####-------------------------] 7424/37505 frames ( 19.8%)  [#####-------------------------] 7488/37505 frames ( 20.0%)  [######------------------------] 7552/37505 frames ( 20.1%)  [######------------------------] 7616/37505 frames ( 20.3%)  [######------------------------] 7680/37505 frames ( 20.5%)  [######------------------------] 7744/37505 frames ( 20.6%)  [######------------------------] 7808/37505 frames ( 20.8%)  [######------------------------] 7872/37505 frames ( 21.0%)  [######------------------------] 7936/37505 frames ( 21.2%)  [######------------------------] 8000/37505 frames ( 21.3%)  [######------------------------] 8064/37505 frames ( 21.5%)  [######------------------------] 8128/37505 frames ( 21.7%)  [######------------------------] 8192/37505 frames ( 21.8%)  [######------------------------] 8256/37505 frames ( 22.0%)  [######------------------------] 8320/37505 frames ( 22.2%)  [######------------------------] 8384/37505 frames ( 22.4%)  [######------------------------] 8448/37505 frames ( 22.5%)  [######------------------------] 8512/37505 frames ( 22.7%)  [######------------------------] 8576/37505 frames ( 22.9%)  [######------------------------] 8640/37505 frames ( 23.0%)  [######------------------------] 8704/37505 frames ( 23.2%)  [#######-----------------------] 8768/37505 frames ( 23.4%)  [#######-----------------------] 8832/37505 frames ( 23.5%)  [#######-----------------------] 8896/37505 frames ( 23.7%)  [#######-----------------------] 8960/37505 frames ( 23.9%)  [#######-----------------------] 9024/37505 frames ( 24.1%)  [#######-----------------------] 9088/37505 frames ( 24.2%)  [#######-----------------------] 9152/37505 frames ( 24.4%)  [#######-----------------------] 9216/37505 frames ( 24.6%)  [#######-----------------------] 9280/37505 frames ( 24.7%)  [#######-----------------------] 9344/37505 frames ( 24.9%)  [#######-----------------------] 9408/37505 frames ( 25.1%)  [#######-----------------------] 9472/37505 frames ( 25.3%)  [#######-----------------------] 9536/37505 frames ( 25.4%)  [#######-----------------------] 9600/37505 frames ( 25.6%)  [#######-----------------------] 9664/37505 frames ( 25.8%)  [#######-----------------------] 9728/37505 frames ( 25.9%)  [#######-----------------------] 9792/37505 frames ( 26.1%)  [#######-----------------------] 9856/37505 frames ( 26.3%)  [#######-----------------------] 9920/37505 frames ( 26.4%)  [#######-----------------------] 9984/37505 frames ( 26.6%)  [########----------------------] 10048/37505 frames ( 26.8%)  [########----------------------] 10112/37505 frames ( 27.0%)  [########----------------------] 10176/37505 frames ( 27.1%)  [########----------------------] 10240/37505 frames ( 27.3%)  [########----------------------] 10304/37505 frames ( 27.5%)  [########----------------------] 10368/37505 frames ( 27.6%)  [########----------------------] 10432/37505 frames ( 27.8%)  [########----------------------] 10496/37505 frames ( 28.0%)  [########----------------------] 10560/37505 frames ( 28.2%)  [########----------------------] 10624/37505 frames ( 28.3%)  [########----------------------] 10688/37505 frames ( 28.5%)  [########----------------------] 10752/37505 frames ( 28.7%)  [########----------------------] 10816/37505 frames ( 28.8%)  [########----------------------] 10880/37505 frames ( 29.0%)  [########----------------------] 10944/37505 frames ( 29.2%)  [########----------------------] 11008/37505 frames ( 29.4%)  [########----------------------] 11072/37505 frames ( 29.5%)  [########----------------------] 11136/37505 frames ( 29.7%)  [########----------------------] 11200/37505 frames ( 29.9%)  [#########---------------------] 11264/37505 frames ( 30.0%)  [#########---------------------] 11328/37505 frames ( 30.2%)  [#########---------------------] 11392/37505 frames ( 30.4%)  [#########---------------------] 11456/37505 frames ( 30.5%)  [#########---------------------] 11520/37505 frames ( 30.7%)  [#########---------------------] 11584/37505 frames ( 30.9%)  [#########---------------------] 11648/37505 frames ( 31.1%)  [#########---------------------] 11712/37505 frames ( 31.2%)  [#########---------------------] 11776/37505 frames ( 31.4%)  [#########---------------------] 11840/37505 frames ( 31.6%)  [#########---------------------] 11904/37505 frames ( 31.7%)  [#########---------------------] 11968/37505 frames ( 31.9%)  [#########---------------------] 12032/37505 frames ( 32.1%)  [#########---------------------] 12096/37505 frames ( 32.3%)  [#########---------------------] 12160/37505 frames ( 32.4%)  [#########---------------------] 12224/37505 frames ( 32.6%)  [#########---------------------] 12288/37505 frames ( 32.8%)  [#########---------------------] 12352/37505 frames ( 32.9%)  [#########---------------------] 12416/37505 frames ( 33.1%)  [#########---------------------] 12480/37505 frames ( 33.3%)  [##########--------------------] 12544/37505 frames ( 33.4%)  [##########--------------------] 12608/37505 frames ( 33.6%)  [##########--------------------] 12672/37505 frames ( 33.8%)  [##########--------------------] 12736/37505 frames ( 34.0%)  [##########--------------------] 12800/37505 frames ( 34.1%)  [##########--------------------] 12864/37505 frames ( 34.3%)  [##########--------------------] 12928/37505 frames ( 34.5%)  [##########--------------------] 12992/37505 frames ( 34.6%)  [##########--------------------] 13056/37505 frames ( 34.8%)  [##########--------------------] 13120/37505 frames ( 35.0%)  [##########--------------------] 13184/37505 frames ( 35.2%)  [##########--------------------] 13248/37505 frames ( 35.3%)  [##########--------------------] 13312/37505 frames ( 35.5%)  [##########--------------------] 13376/37505 frames ( 35.7%)  [##########--------------------] 13440/37505 frames ( 35.8%)  [##########--------------------] 13504/37505 frames ( 36.0%)  [##########--------------------] 13568/37505 frames ( 36.2%)  [##########--------------------] 13632/37505 frames ( 36.3%)  [##########--------------------] 13696/37505 frames ( 36.5%)  [###########-------------------] 13760/37505 frames ( 36.7%)  [###########-------------------] 13824/37505 frames ( 36.9%)  [###########-------------------] 13888/37505 frames ( 37.0%)  [###########-------------------] 13952/37505 frames ( 37.2%)  [###########-------------------] 14016/37505 frames ( 37.4%)  [###########-------------------] 14080/37505 frames ( 37.5%)  [###########-------------------] 14144/37505 frames ( 37.7%)  [###########-------------------] 14208/37505 frames ( 37.9%)  [###########-------------------] 14272/37505 frames ( 38.1%)  [###########-------------------] 14336/37505 frames ( 38.2%)  [###########-------------------] 14400/37505 frames ( 38.4%)  [###########-------------------] 14464/37505 frames ( 38.6%)  [###########-------------------] 14528/37505 frames ( 38.7%)  [###########-------------------] 14592/37505 frames ( 38.9%)  [###########-------------------] 14656/37505 frames ( 39.1%)  [###########-------------------] 14720/37505 frames ( 39.2%)  [###########-------------------] 14784/37505 frames ( 39.4%)  [###########-------------------] 14848/37505 frames ( 39.6%)  [###########-------------------] 14912/37505 frames ( 39.8%)  [###########-------------------] 14976/37505 frames ( 39.9%)  [############------------------] 15040/37505 frames ( 40.1%)  [############------------------] 15104/37505 frames ( 40.3%)  [############------------------] 15168/37505 frames ( 40.4%)  [############------------------] 15232/37505 frames ( 40.6%)  [############------------------] 15296/37505 frames ( 40.8%)  [############------------------] 15360/37505 frames ( 41.0%)  [############------------------] 15424/37505 frames ( 41.1%)  [############------------------] 15488/37505 frames ( 41.3%)  [############------------------] 15552/37505 frames ( 41.5%)  [############------------------] 15616/37505 frames ( 41.6%)  [############------------------] 15680/37505 frames ( 41.8%)  [############------------------] 15744/37505 frames ( 42.0%)  [############------------------] 15808/37505 frames ( 42.1%)  [############------------------] 15872/37505 frames ( 42.3%)  [############------------------] 15936/37505 frames ( 42.5%)  [############------------------] 16000/37505 frames ( 42.7%)  [############------------------] 16064/37505 frames ( 42.8%)  [############------------------] 16128/37505 frames ( 43.0%)  [############------------------] 16192/37505 frames ( 43.2%)  [#############-----------------] 16256/37505 frames ( 43.3%)  [#############-----------------] 16320/37505 frames ( 43.5%)  [#############-----------------] 16384/37505 frames ( 43.7%)  [#############-----------------] 16448/37505 frames ( 43.9%)  [#############-----------------] 16512/37505 frames ( 44.0%)  [#############-----------------] 16576/37505 frames ( 44.2%)  [#############-----------------] 16640/37505 frames ( 44.4%)  [#############-----------------] 16704/37505 frames ( 44.5%)  [#############-----------------] 16768/37505 frames ( 44.7%)  [#############-----------------] 16832/37505 frames ( 44.9%)  [#############-----------------] 16896/37505 frames ( 45.0%)  [#############-----------------] 16960/37505 frames ( 45.2%)  [#############-----------------] 17024/37505 frames ( 45.4%)  [#############-----------------] 17088/37505 frames ( 45.6%)  [#############-----------------] 17152/37505 frames ( 45.7%)  [#############-----------------] 17216/37505 frames ( 45.9%)  [#############-----------------] 17280/37505 frames ( 46.1%)  [#############-----------------] 17344/37505 frames ( 46.2%)  [#############-----------------] 17408/37505 frames ( 46.4%)  [#############-----------------] 17472/37505 frames ( 46.6%)  [##############----------------] 17536/37505 frames ( 46.8%)  [##############----------------] 17600/37505 frames ( 46.9%)  [##############----------------] 17664/37505 frames ( 47.1%)  [##############----------------] 17728/37505 frames ( 47.3%)  [##############----------------] 17792/37505 frames ( 47.4%)  [##############----------------] 17856/37505 frames ( 47.6%)  [##############----------------] 17920/37505 frames ( 47.8%)  [##############----------------] 17984/37505 frames ( 48.0%)  [##############----------------] 18048/37505 frames ( 48.1%)  [##############----------------] 18112/37505 frames ( 48.3%)  [##############----------------] 18176/37505 frames ( 48.5%)  [##############----------------] 18240/37505 frames ( 48.6%)  [##############----------------] 18304/37505 frames ( 48.8%)  [##############----------------] 18368/37505 frames ( 49.0%)  [##############----------------] 18432/37505 frames ( 49.1%)  [##############----------------] 18496/37505 frames ( 49.3%)  [##############----------------] 18560/37505 frames ( 49.5%)  [##############----------------] 18624/37505 frames ( 49.7%)  [##############----------------] 18688/37505 frames ( 49.8%)  [##############----------------] 18752/37505 frames ( 50.0%)  [###############---------------] 18816/37505 frames ( 50.2%)  [###############---------------] 18880/37505 frames ( 50.3%)  [###############---------------] 18944/37505 frames ( 50.5%)  [###############---------------] 19008/37505 frames ( 50.7%)  [###############---------------] 19072/37505 frames ( 50.9%)  [###############---------------] 19136/37505 frames ( 51.0%)  [###############---------------] 19200/37505 frames ( 51.2%)  [###############---------------] 19264/37505 frames ( 51.4%)  [###############---------------] 19328/37505 frames ( 51.5%)  [###############---------------] 19392/37505 frames ( 51.7%)  [###############---------------] 19456/37505 frames ( 51.9%)  [###############---------------] 19520/37505 frames ( 52.0%)  [###############---------------] 19584/37505 frames ( 52.2%)  [###############---------------] 19648/37505 frames ( 52.4%)  [###############---------------] 19712/37505 frames ( 52.6%)  [###############---------------] 19776/37505 frames ( 52.7%)  [###############---------------] 19840/37505 frames ( 52.9%)  [###############---------------] 19904/37505 frames ( 53.1%)  [###############---------------] 19968/37505 frames ( 53.2%)  [################--------------] 20032/37505 frames ( 53.4%)  [################--------------] 20096/37505 frames ( 53.6%)  [################--------------] 20160/37505 frames ( 53.8%)  [################--------------] 20224/37505 frames ( 53.9%)  [################--------------] 20288/37505 frames ( 54.1%)  [################--------------] 20352/37505 frames ( 54.3%)  [################--------------] 20416/37505 frames ( 54.4%)  [################--------------] 20480/37505 frames ( 54.6%)  [################--------------] 20544/37505 frames ( 54.8%)  [################--------------] 20608/37505 frames ( 54.9%)  [################--------------] 20672/37505 frames ( 55.1%)  [################--------------] 20736/37505 frames ( 55.3%)  [################--------------] 20800/37505 frames ( 55.5%)  [################--------------] 20864/37505 frames ( 55.6%)  [################--------------] 20928/37505 frames ( 55.8%)  [################--------------] 20992/37505 frames ( 56.0%)  [################--------------] 21056/37505 frames ( 56.1%)  [################--------------] 21120/37505 frames ( 56.3%)  [################--------------] 21184/37505 frames ( 56.5%)  [################--------------] 21248/37505 frames ( 56.7%)  [#################-------------] 21312/37505 frames ( 56.8%)  [#################-------------] 21376/37505 frames ( 57.0%)  [#################-------------] 21440/37505 frames ( 57.2%)  [#################-------------] 21504/37505 frames ( 57.3%)  [#################-------------] 21568/37505 frames ( 57.5%)  [#################-------------] 21632/37505 frames ( 57.7%)  [#################-------------] 21696/37505 frames ( 57.8%)  [#################-------------] 21760/37505 frames ( 58.0%)  [#################-------------] 21824/37505 frames ( 58.2%)  [#################-------------] 21888/37505 frames ( 58.4%)  [#################-------------] 21952/37505 frames ( 58.5%)  [#################-------------] 22016/37505 frames ( 58.7%)  [#################-------------] 22080/37505 frames ( 58.9%)  [#################-------------] 22144/37505 frames ( 59.0%)  [#################-------------] 22208/37505 frames ( 59.2%)  [#################-------------] 22272/37505 frames ( 59.4%)  [#################-------------] 22336/37505 frames ( 59.6%)  [#################-------------] 22400/37505 frames ( 59.7%)  [#################-------------] 22464/37505 frames ( 59.9%)  [##################------------] 22528/37505 frames ( 60.1%)  [##################------------] 22592/37505 frames ( 60.2%)  [##################------------] 22656/37505 frames ( 60.4%)  [##################------------] 22720/37505 frames ( 60.6%)  [##################------------] 22784/37505 frames ( 60.7%)  [##################------------] 22848/37505 frames ( 60.9%)  [##################------------] 22912/37505 frames ( 61.1%)  [##################------------] 22976/37505 frames ( 61.3%)  [##################------------] 23040/37505 frames ( 61.4%)  [##################------------] 23104/37505 frames ( 61.6%)  [##################------------] 23168/37505 frames ( 61.8%)  [##################------------] 23232/37505 frames ( 61.9%)  [##################------------] 23296/37505 frames ( 62.1%)  [##################------------] 23360/37505 frames ( 62.3%)  [##################------------] 23424/37505 frames ( 62.5%)  [##################------------] 23488/37505 frames ( 62.6%)  [##################------------] 23552/37505 frames ( 62.8%)  [##################------------] 23616/37505 frames ( 63.0%)  [##################------------] 23680/37505 frames ( 63.1%)  [##################------------] 23744/37505 frames ( 63.3%)  [###################-----------] 23808/37505 frames ( 63.5%)  [###################-----------] 23872/37505 frames ( 63.7%)  [###################-----------] 23936/37505 frames ( 63.8%)  [###################-----------] 24000/37505 frames ( 64.0%)  [###################-----------] 24064/37505 frames ( 64.2%)  [###################-----------] 24128/37505 frames ( 64.3%)  [###################-----------] 24192/37505 frames ( 64.5%)  [###################-----------] 24256/37505 frames ( 64.7%)  [###################-----------] 24320/37505 frames ( 64.8%)  [###################-----------] 24384/37505 frames ( 65.0%)  [###################-----------] 24448/37505 frames ( 65.2%)  [###################-----------] 24512/37505 frames ( 65.4%)  [###################-----------] 24576/37505 frames ( 65.5%)  [###################-----------] 24640/37505 frames ( 65.7%)  [###################-----------] 24704/37505 frames ( 65.9%)  [###################-----------] 24768/37505 frames ( 66.0%)  [###################-----------] 24832/37505 frames ( 66.2%)  [###################-----------] 24896/37505 frames ( 66.4%)  [###################-----------] 24960/37505 frames ( 66.6%)  [####################----------] 25024/37505 frames ( 66.7%)  [####################----------] 25088/37505 frames ( 66.9%)  [####################----------] 25152/37505 frames ( 67.1%)  [####################----------] 25216/37505 frames ( 67.2%)  [####################----------] 25280/37505 frames ( 67.4%)  [####################----------] 25344/37505 frames ( 67.6%)  [####################----------] 25408/37505 frames ( 67.7%)  [####################----------] 25472/37505 frames ( 67.9%)  [####################----------] 25536/37505 frames ( 68.1%)  [####################----------] 25600/37505 frames ( 68.3%)  [####################----------] 25664/37505 frames ( 68.4%)  [####################----------] 25728/37505 frames ( 68.6%)  [####################----------] 25792/37505 frames ( 68.8%)  [####################----------] 25856/37505 frames ( 68.9%)  [####################----------] 25920/37505 frames ( 69.1%)  [####################----------] 25984/37505 frames ( 69.3%)  [####################----------] 26048/37505 frames ( 69.5%)  [####################----------] 26112/37505 frames ( 69.6%)  [####################----------] 26176/37505 frames ( 69.8%)  [####################----------] 26240/37505 frames ( 70.0%)  [#####################---------] 26304/37505 frames ( 70.1%)  [#####################---------] 26368/37505 frames ( 70.3%)  [#####################---------] 26432/37505 frames ( 70.5%)  [#####################---------] 26496/37505 frames ( 70.6%)  [#####################---------] 26560/37505 frames ( 70.8%)  [#####################---------] 26624/37505 frames ( 71.0%)  [#####################---------] 26688/37505 frames ( 71.2%)  [#####################---------] 26752/37505 frames ( 71.3%)  [#####################---------] 26816/37505 frames ( 71.5%)  [#####################---------] 26880/37505 frames ( 71.7%)  [#####################---------] 26944/37505 frames ( 71.8%)  [#####################---------] 27008/37505 frames ( 72.0%)  [#####################---------] 27072/37505 frames ( 72.2%)  [#####################---------] 27136/37505 frames ( 72.4%)  [#####################---------] 27200/37505 frames ( 72.5%)  [#####################---------] 27264/37505 frames ( 72.7%)  [#####################---------] 27328/37505 frames ( 72.9%)  [#####################---------] 27392/37505 frames ( 73.0%)  [#####################---------] 27456/37505 frames ( 73.2%)  [######################--------] 27520/37505 frames ( 73.4%)  [######################--------] 27584/37505 frames ( 73.5%)  [######################--------] 27648/37505 frames ( 73.7%)  [######################--------] 27712/37505 frames ( 73.9%)  [######################--------] 27776/37505 frames ( 74.1%)  [######################--------] 27840/37505 frames ( 74.2%)  [######################--------] 27904/37505 frames ( 74.4%)  [######################--------] 27968/37505 frames ( 74.6%)  [######################--------] 28032/37505 frames ( 74.7%)  [######################--------] 28096/37505 frames ( 74.9%)  [######################--------] 28160/37505 frames ( 75.1%)  [######################--------] 28224/37505 frames ( 75.3%)  [######################--------] 28288/37505 frames ( 75.4%)  [######################--------] 28352/37505 frames ( 75.6%)  [######################--------] 28416/37505 frames ( 75.8%)  [######################--------] 28480/37505 frames ( 75.9%)  [######################--------] 28544/37505 frames ( 76.1%)  [######################--------] 28608/37505 frames ( 76.3%)  [######################--------] 28672/37505 frames ( 76.4%)  [######################--------] 28736/37505 frames ( 76.6%)  [#######################-------] 28800/37505 frames ( 76.8%)  [#######################-------] 28864/37505 frames ( 77.0%)  [#######################-------] 28928/37505 frames ( 77.1%)  [#######################-------] 28992/37505 frames ( 77.3%)  [#######################-------] 29056/37505 frames ( 77.5%)  [#######################-------] 29120/37505 frames ( 77.6%)  [#######################-------] 29184/37505 frames ( 77.8%)  [#######################-------] 29248/37505 frames ( 78.0%)  [#######################-------] 29312/37505 frames ( 78.2%)  [#######################-------] 29376/37505 frames ( 78.3%)  [#######################-------] 29440/37505 frames ( 78.5%)  [#######################-------] 29504/37505 frames ( 78.7%)  [#######################-------] 29568/37505 frames ( 78.8%)  [#######################-------] 29632/37505 frames ( 79.0%)  [#######################-------] 29696/37505 frames ( 79.2%)  [#######################-------] 29760/37505 frames ( 79.3%)  [#######################-------] 29824/37505 frames ( 79.5%)  [#######################-------] 29888/37505 frames ( 79.7%)  [#######################-------] 29952/37505 frames ( 79.9%)  [########################------] 30016/37505 frames ( 80.0%)  [########################------] 30080/37505 frames ( 80.2%)  [########################------] 30144/37505 frames ( 80.4%)  [########################------] 30208/37505 frames ( 80.5%)  [########################------] 30272/37505 frames ( 80.7%)  [########################------] 30336/37505 frames ( 80.9%)  [########################------] 30400/37505 frames ( 81.1%)  [########################------] 30464/37505 frames ( 81.2%)  [########################------] 30528/37505 frames ( 81.4%)  [########################------] 30592/37505 frames ( 81.6%)  [########################------] 30656/37505 frames ( 81.7%)  [########################------] 30720/37505 frames ( 81.9%)  [########################------] 30784/37505 frames ( 82.1%)  [########################------] 30848/37505 frames ( 82.3%)  [########################------] 30912/37505 frames ( 82.4%)  [########################------] 30976/37505 frames ( 82.6%)  [########################------] 31040/37505 frames ( 82.8%)  [########################------] 31104/37505 frames ( 82.9%)  [########################------] 31168/37505 frames ( 83.1%)  [########################------] 31232/37505 frames ( 83.3%)  [#########################-----] 31296/37505 frames ( 83.4%)  [#########################-----] 31360/37505 frames ( 83.6%)  [#########################-----] 31424/37505 frames ( 83.8%)  [#########################-----] 31488/37505 frames ( 84.0%)  [#########################-----] 31552/37505 frames ( 84.1%)  [#########################-----] 31616/37505 frames ( 84.3%)  [#########################-----] 31680/37505 frames ( 84.5%)  [#########################-----] 31744/37505 frames ( 84.6%)  [#########################-----] 31808/37505 frames ( 84.8%)  [#########################-----] 31872/37505 frames ( 85.0%)  [#########################-----] 31936/37505 frames ( 85.2%)  [#########################-----] 32000/37505 frames ( 85.3%)  [#########################-----] 32064/37505 frames ( 85.5%)  [#########################-----] 32128/37505 frames ( 85.7%)  [#########################-----] 32192/37505 frames ( 85.8%)  [#########################-----] 32256/37505 frames ( 86.0%)  [#########################-----] 32320/37505 frames ( 86.2%)  [#########################-----] 32384/37505 frames ( 86.3%)  [#########################-----] 32448/37505 frames ( 86.5%)  [##########################----] 32512/37505 frames ( 86.7%)  [##########################----] 32576/37505 frames ( 86.9%)  [##########################----] 32640/37505 frames ( 87.0%)  [##########################----] 32704/37505 frames ( 87.2%)  [##########################----] 32768/37505 frames ( 87.4%)  [##########################----] 32832/37505 frames ( 87.5%)  [##########################----] 32896/37505 frames ( 87.7%)  [##########################----] 32960/37505 frames ( 87.9%)  [##########################----] 33024/37505 frames ( 88.1%)  [##########################----] 33088/37505 frames ( 88.2%)  [##########################----] 33152/37505 frames ( 88.4%)  [##########################----] 33216/37505 frames ( 88.6%)  [##########################----] 33280/37505 frames ( 88.7%)  [##########################----] 33344/37505 frames ( 88.9%)  [##########################----] 33408/37505 frames ( 89.1%)  [##########################----] 33472/37505 frames ( 89.2%)  [##########################----] 33536/37505 frames ( 89.4%)  [##########################----] 33600/37505 frames ( 89.6%)  [##########################----] 33664/37505 frames ( 89.8%)  [##########################----] 33728/37505 frames ( 89.9%)  [###########################---] 33792/37505 frames ( 90.1%)  [###########################---] 33856/37505 frames ( 90.3%)  [###########################---] 33920/37505 frames ( 90.4%)  [###########################---] 33984/37505 frames ( 90.6%)  [###########################---] 34048/37505 frames ( 90.8%)  [###########################---] 34112/37505 frames ( 91.0%)  [###########################---] 34176/37505 frames ( 91.1%)  [###########################---] 34240/37505 frames ( 91.3%)  [###########################---] 34304/37505 frames ( 91.5%)  [###########################---] 34368/37505 frames ( 91.6%)  [###########################---] 34432/37505 frames ( 91.8%)  [###########################---] 34496/37505 frames ( 92.0%)  [###########################---] 34560/37505 frames ( 92.1%)  [###########################---] 34624/37505 frames ( 92.3%)  [###########################---] 34688/37505 frames ( 92.5%)  [###########################---] 34752/37505 frames ( 92.7%)  [###########################---] 34816/37505 frames ( 92.8%)  [###########################---] 34880/37505 frames ( 93.0%)  [###########################---] 34944/37505 frames ( 93.2%)  [############################--] 35008/37505 frames ( 93.3%)  [############################--] 35072/37505 frames ( 93.5%)  [############################--] 35136/37505 frames ( 93.7%)  [############################--] 35200/37505 frames ( 93.9%)  [############################--] 35264/37505 frames ( 94.0%)  [############################--] 35328/37505 frames ( 94.2%)  [############################--] 35392/37505 frames ( 94.4%)  [############################--] 35456/37505 frames ( 94.5%)  [############################--] 35520/37505 frames ( 94.7%)  [############################--] 35584/37505 frames ( 94.9%)  [############################--] 35648/37505 frames ( 95.0%)  [############################--] 35712/37505 frames ( 95.2%)  [############################--] 35776/37505 frames ( 95.4%)  [############################--] 35840/37505 frames ( 95.6%)  [############################--] 35904/37505 frames ( 95.7%)  [############################--] 35968/37505 frames ( 95.9%)  [############################--] 36032/37505 frames ( 96.1%)  [############################--] 36096/37505 frames ( 96.2%)  [############################--] 36160/37505 frames ( 96.4%)  [############################--] 36224/37505 frames ( 96.6%)  [#############################-] 36288/37505 frames ( 96.8%)  [#############################-] 36352/37505 frames ( 96.9%)  [#############################-] 36416/37505 frames ( 97.1%)  [#############################-] 36480/37505 frames ( 97.3%)  [#############################-] 36544/37505 frames ( 97.4%)  [#############################-] 36608/37505 frames ( 97.6%)  [#############################-] 36672/37505 frames ( 97.8%)  [#############################-] 36736/37505 frames ( 97.9%)  [#############################-] 36800/37505 frames ( 98.1%)  [#############################-] 36864/37505 frames ( 98.3%)  [#############################-] 36928/37505 frames ( 98.5%)  [#############################-] 36992/37505 frames ( 98.6%)  [#############################-] 37056/37505 frames ( 98.8%)  [#############################-] 37120/37505 frames ( 99.0%)  [#############################-] 37184/37505 frames ( 99.1%)  [#############################-] 37248/37505 frames ( 99.3%)  [#############################-] 37312/37505 frames ( 99.5%)  [#############################-] 37376/37505 frames ( 99.7%)  [#############################-] 37440/37505 frames ( 99.8%)  [#############################-] 37504/37505 frames (100.0%)  [##############################] 37505/37505 frames (100.0%)
+  [training video 76 10-25.mp4] duration 625.1s -> contours from models/videos/
+  [training video 76 10-25.mp4] Dash slot: RIGHT (slot2)  (avg contours: 0.62)  [forced RIGHT: video #76 >= 67]
+  [training video 76 10-25.mp4] pred 99 / gt 0 dashes  (err +99; tp 0 fp 99 fn 0)
+
+================================================================
+DASH COUNT PER VIDEO  (pred / gt)
+================================================================
+  3-10 luna ghost dash.mkv                3 / 4    (err -1)
+  5-10 candd1 shot.mkv                    3 / 3    (err +0)
+  5-10 panther cap teamup kill.mkv        2 / 1    (err +1)
+  5-10 triple ghost dash no kill.mkv      5 / 5    (err +0)
+  7-10 triple ghost dash.mkv              4 / 4    (err +0)
+  8-10 panther ult 4k.mkv                 7 / 7    (err +0)
+  actirple.mp4                            4 / 4    (err +0)
+  birnin tchalla almost penta.mp4         7 / 7    (err +0)
+  clean husk 5k.mp4                       9 / 9    (err +0)
+  clean kunlun mk kill.mp4                3 / 3    (err +0)
+  midtown.mp4                             6 / 6    (err +0)
+  purple panther spider islands 4k.mp4    5 / 5    (err +0)
+  quick invis.mp4                         3 / 3    (err +0)
+  souder uskabds truoke.mp4             (no decode)
+  spider islands cable combo.mp4          3 / 3    (err +0)
+  training video 70 11-18.mp4           112 / 113  (err -1)
+  training video 76 10-25.mp4            99 / 0    (err +99)
+----------------------------------------------------------------
+  count MAE 6.375  |  timing F1 0.748 (P 0.61 R 0.95)  over 16 scored video(s)
+
+CSV -> predictions\counts_per_video.csv

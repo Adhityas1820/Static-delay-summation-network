@@ -1,0 +1,28 @@
+Grid Search Results:
+layers=1, hidden=32, epochs=20 -> MAE=5.235, F1=0.216
+layers=1, hidden=32, epochs=30 -> MAE=5.235, F1=0.216
+layers=1, hidden=32, epochs=40 -> MAE=5.235, F1=0.216
+layers=1, hidden=64, epochs=20 -> MAE=12.706, F1=0.249
+layers=1, hidden=64, epochs=30 -> MAE=12.706, F1=0.249
+layers=1, hidden=64, epochs=40 -> MAE=12.706, F1=0.249
+layers=2, hidden=32, epochs=20 -> MAE=8.941, F1=0.229
+layers=2, hidden=32, epochs=30 -> MAE=8.941, F1=0.229
+layers=2, hidden=32, epochs=40 -> MAE=8.941, F1=0.229
+layers=2, hidden=64, epochs=20 -> MAE=6.706, F1=0.432
+layers=2, hidden=64, epochs=30 -> MAE=6.706, F1=0.432
+layers=2, hidden=64, epochs=40 -> MAE=6.529, F1=0.382
+layers=3, hidden=32, epochs=20 -> MAE=7.059, F1=0.541
+layers=3, hidden=32, epochs=30 -> MAE=7.059, F1=0.541
+layers=3, hidden=32, epochs=40 -> MAE=7.059, F1=0.541
+layers=3, hidden=64, epochs=20 -> MAE=7.059, F1=0.535
+layers=3, hidden=64, epochs=30 -> MAE=7.059, F1=0.535
+layers=3, hidden=64, epochs=40 -> MAE=7.059, F1=0.535
+layers=4, hidden=32, epochs=20 -> MAE=5.412, F1=0.756
+layers=4, hidden=32, epochs=30 -> MAE=5.412, F1=0.756
+layers=4, hidden=32, epochs=40 -> MAE=5.412, F1=0.756
+layers=4, hidden=64, epochs=20 -> MAE=6.059, F1=0.734
+layers=4, hidden=64, epochs=30 -> MAE=6.588, F1=0.714
+layers=4, hidden=64, epochs=40 -> MAE=6.588, F1=0.714
+
+Best configuration: layers=4, hidden=32, epochs=20
+Best Score: F1=0.756, MAE=5.412

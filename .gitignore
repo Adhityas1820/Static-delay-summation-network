@@ -1,0 +1,32 @@
+# ---- large binary / data artifacts (kept on disk, not in git) ----
+
+# Source + rendered videos
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+
+# Extracted CNN features and array dumps (regenerable, large)
+*.npz
+*.npy
+
+# Trained model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ---- OS / editor cruft ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

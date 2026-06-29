@@ -1,0 +1,9 @@
+# Phase 1 (process_data.py) — data pipeline
+opencv-python>=4.10
+numpy>=2.0
+# Phase 1 Stage 2 needs the CNN front-end; Phases 2/3 need torch too
+torch>=2.0
+torchvision>=0.15
+# Stage 2 fast video decode (batched + decode-time downscale). Optional:
+# features.py falls back to OpenCV if decord is missing.
+decord>=0.6

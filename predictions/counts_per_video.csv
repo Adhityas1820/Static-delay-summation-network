@@ -1,0 +1,18 @@
+video,pred_count,gt_count,count_err,tp,fp,fn
+3-10 luna ghost dash.mkv,3,4,-1,3,0,1
+5-10 candd1 shot.mkv,3,3,0,3,0,0
+5-10 panther cap teamup kill.mkv,2,1,1,1,1,0
+5-10 triple ghost dash no kill.mkv,5,5,0,5,0,0
+7-10 triple ghost dash.mkv,4,4,0,4,0,0
+8-10 panther ult 4k.mkv,7,7,0,7,0,0
+actirple.mp4,4,4,0,4,0,0
+birnin tchalla almost penta.mp4,7,7,0,6,1,1
+clean husk 5k.mp4,9,9,0,9,0,0
+clean kunlun mk kill.mp4,3,3,0,3,0,0
+midtown.mp4,6,6,0,6,0,0
+purple panther spider islands 4k.mp4,5,5,0,4,1,1
+quick invis.mp4,3,3,0,3,0,0
+souder uskabds truoke.mp4,,,,,,
+spider islands cable combo.mp4,3,3,0,3,0,0
+training video 70 11-18.mp4,112,113,-1,108,4,5
+training video 76 10-25.mp4,99,0,99,0,99,0

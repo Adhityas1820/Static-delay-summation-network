@@ -1,0 +1,64 @@
+device: cuda
+videos: 81 total  ->  72 train / 9 val
+windows: 20729 train / 1628 val  (window=128)
+in_dim=512  train completion peaks=3340  loss=heatmap (pos_weight=60.0)
+model: 4 fixed delay layer(s), hidden=32
+epoch   1  train_loss 0.1810  val_loss 0.1929  cntMAE 39.000  P 0.323  R 0.785  F1 0.458  | grad L1 2.5e-01 L2 2.5e-01 L3 2.1e-01 L4 2.3e-01
+epoch   2  train_loss 0.1440  val_loss 0.2110  cntMAE 7.667  P 0.565  R 0.724  F1 0.635  | grad L1 2.5e-01 L2 1.8e-01 L3 1.6e-01 L4 1.9e-01
+epoch   3  train_loss 0.1352  val_loss 0.1954  cntMAE 13.000  P 0.504  R 0.744  F1 0.601  | grad L1 2.4e-01 L2 1.4e-01 L3 1.3e-01 L4 1.6e-01
+epoch   4  train_loss 0.1298  val_loss 0.1773  cntMAE 30.222  P 0.375  R 0.789  F1 0.508  | grad L1 2.5e-01 L2 1.2e-01 L3 1.1e-01 L4 1.4e-01
+epoch   5  train_loss 0.1275  val_loss 0.1828  cntMAE 17.444  P 0.459  R 0.752  F1 0.570  | grad L1 2.6e-01 L2 1.2e-01 L3 1.1e-01 L4 1.4e-01
+epoch   6  train_loss 0.1234  val_loss 0.1892  cntMAE 15.222  P 0.480  R 0.748  F1 0.585  | grad L1 2.6e-01 L2 1.2e-01 L3 1.1e-01 L4 1.3e-01
+epoch   7  train_loss 0.1212  val_loss 0.1889  cntMAE 22.111  P 0.422  R 0.764  F1 0.544  | grad L1 2.7e-01 L2 1.2e-01 L3 1.1e-01 L4 1.3e-01
+epoch   8  train_loss 0.1199  val_loss 0.1891  cntMAE 27.667  P 0.388  R 0.780  F1 0.518  | grad L1 2.7e-01 L2 1.2e-01 L3 1.1e-01 L4 1.3e-01
+epoch   9  train_loss 0.1167  val_loss 0.1757  cntMAE 60.111  P 0.258  R 0.825  F1 0.393  | grad L1 2.8e-01 L2 1.2e-01 L3 1.2e-01 L4 1.2e-01
+epoch  10  train_loss 0.1155  val_loss 0.1971  cntMAE 10.111  P 0.543  R 0.744  F1 0.628  | grad L1 2.9e-01 L2 1.3e-01 L3 1.2e-01 L4 1.2e-01
+epoch  11  train_loss 0.1127  val_loss 0.1803  cntMAE 49.778  P 0.285  R 0.805  F1 0.421  | grad L1 2.9e-01 L2 1.2e-01 L3 1.2e-01 L4 1.2e-01
+epoch  12  train_loss 0.1119  val_loss 0.1796  cntMAE 56.333  P 0.266  R 0.813  F1 0.400  | grad L1 3.0e-01 L2 1.3e-01 L3 1.3e-01 L4 1.2e-01
+epoch  13  train_loss 0.1095  val_loss 0.2100  cntMAE 10.778  P 0.531  R 0.740  F1 0.618  | grad L1 3.1e-01 L2 1.4e-01 L3 1.3e-01 L4 1.2e-01
+epoch  14  train_loss 0.1087  val_loss 0.1894  cntMAE 27.000  P 0.384  R 0.764  F1 0.512  | grad L1 3.1e-01 L2 1.4e-01 L3 1.3e-01 L4 1.2e-01
+epoch  15  train_loss 0.1074  val_loss 0.2026  cntMAE 13.222  P 0.507  R 0.752  F1 0.606  | grad L1 3.2e-01 L2 1.4e-01 L3 1.3e-01 L4 1.2e-01
+epoch  16  train_loss 0.1050  val_loss 0.2063  cntMAE 13.000  P 0.501  R 0.740  F1 0.598  | grad L1 3.2e-01 L2 1.4e-01 L3 1.3e-01 L4 1.2e-01
+epoch  17  train_loss 0.1035  val_loss 0.1926  cntMAE 41.556  P 0.311  R 0.785  F1 0.446  | grad L1 3.3e-01 L2 1.5e-01 L3 1.4e-01 L4 1.2e-01
+epoch  18  train_loss 0.1028  val_loss 0.1913  cntMAE 45.778  P 0.296  R 0.793  F1 0.431  | grad L1 3.4e-01 L2 1.5e-01 L3 1.4e-01 L4 1.2e-01
+epoch  19  train_loss 0.1003  val_loss 0.2238  cntMAE 9.889  P 0.537  R 0.732  F1 0.620  | grad L1 3.4e-01 L2 1.5e-01 L3 1.4e-01 L4 1.2e-01
+epoch  20  train_loss 0.1008  val_loss 0.1895  cntMAE 46.444  P 0.289  R 0.780  F1 0.422  | grad L1 3.5e-01 L2 1.5e-01 L3 1.4e-01 L4 1.3e-01
+epoch  21  train_loss 0.0984  val_loss 0.1903  cntMAE 62.111  P 0.246  R 0.805  F1 0.377  | grad L1 3.5e-01 L2 1.5e-01 L3 1.4e-01 L4 1.2e-01
+epoch  22  train_loss 0.0977  val_loss 0.1968  cntMAE 38.222  P 0.322  R 0.772  F1 0.455  | grad L1 3.6e-01 L2 1.6e-01 L3 1.4e-01 L4 1.2e-01
+epoch  23  train_loss 0.0959  val_loss 0.1951  cntMAE 44.111  P 0.302  R 0.789  F1 0.436  | grad L1 3.6e-01 L2 1.6e-01 L3 1.4e-01 L4 1.2e-01
+epoch  24  train_loss 0.0955  val_loss 0.1991  cntMAE 33.667  P 0.342  R 0.764  F1 0.473  | grad L1 3.7e-01 L2 1.6e-01 L3 1.5e-01 L4 1.3e-01
+epoch  25  train_loss 0.0932  val_loss 0.2082  cntMAE 24.333  P 0.398  R 0.752  F1 0.520  | grad L1 3.6e-01 L2 1.5e-01 L3 1.4e-01 L4 1.2e-01
+epoch  26  train_loss 0.0932  val_loss 0.2036  cntMAE 43.778  P 0.297  R 0.772  F1 0.429  | grad L1 3.7e-01 L2 1.6e-01 L3 1.5e-01 L4 1.3e-01
+epoch  27  train_loss 0.0920  val_loss 0.2132  cntMAE 26.111  P 0.385  R 0.752  F1 0.509  | grad L1 3.7e-01 L2 1.6e-01 L3 1.5e-01 L4 1.3e-01
+epoch  28  train_loss 0.0913  val_loss 0.2003  cntMAE 66.333  P 0.236  R 0.809  F1 0.365  | grad L1 3.8e-01 L2 1.6e-01 L3 1.5e-01 L4 1.3e-01
+epoch  29  train_loss 0.0897  val_loss 0.2031  cntMAE 43.444  P 0.300  R 0.776  F1 0.433  | grad L1 3.8e-01 L2 1.6e-01 L3 1.5e-01 L4 1.3e-01
+epoch  30  train_loss 0.0895  val_loss 0.2107  cntMAE 36.556  P 0.329  R 0.768  F1 0.460  | grad L1 3.8e-01 L2 1.6e-01 L3 1.5e-01 L4 1.3e-01
+
+best val timing-F1 (@thr 0.5): 0.635
+
+NMS-threshold sweep on val  (match tol=8f, min-dist=12f):
+  thr | count MAE | timing P/R/F1      | tp/fp/fn
+  0.05 |  242.333  | 0.10/0.94/0.17 | 231/2196/15
+  0.10 |  148.111  | 0.14/0.90/0.24 | 221/1358/25
+  0.15 |   98.000  | 0.19/0.86/0.31 | 212/916/34
+  0.20 |   67.333  | 0.24/0.83/0.37 | 205/647/41
+  0.25 |   47.889  | 0.29/0.80/0.43 | 198/479/48
+  0.30 |   35.333  | 0.34/0.78/0.47 | 192/372/54
+  0.35 |   25.222  | 0.40/0.77/0.53 | 190/283/56
+  0.40 |   18.556  | 0.45/0.75/0.56 | 185/228/61
+  0.45 |   11.889  | 0.51/0.74/0.60 | 181/172/65
+  0.50 |    7.667  | 0.57/0.72/0.63 | 178/137/68
+  0.55 |    4.889  | 0.61/0.72/0.66 | 178/112/68
+  0.60 |    2.333  | 0.66/0.70/0.68 | 173/90/73
+  0.65 |    2.222  | 0.69/0.69/0.69 | 170/78/76
+  0.70 |    1.778  | 0.70/0.67/0.69 | 166/70/80
+  0.75 |    2.556  | 0.72/0.65/0.68 | 160/63/86
+  0.80 |    3.444  | 0.71/0.62/0.66 | 153/62/93
+  0.85 |    5.889  | 0.70/0.55/0.62 | 136/57/110
+  0.90 |    9.889  | 0.71/0.45/0.55 | 111/46/135
+  0.95 |   20.667  | 0.63/0.15/0.25 | 38/22/208
+
+best timing F1=0.689 @ thr=0.70  (count MAE=1.778  P=0.70  R=0.67)
+sweep      -> C:\Adhitya\Coding\test\FDNN\checkpoints\sweep.json
+checkpoint -> C:\Adhitya\Coding\test\FDNN\checkpoints\sdsnn.pt
+metrics    -> C:\Adhitya\Coding\test\FDNN\checkpoints\metrics.json
